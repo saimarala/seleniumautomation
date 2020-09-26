@@ -28,7 +28,10 @@
 			</plugin>
 		</plugins>
 	</build>
-	<packaging>jar</packaging>
+    <modules>
+        <module>SeleniumCloud</module>
+    </modules>
+    <packaging>pom</packaging>
 
 	<name>Mavenproject</name>
 	<url>http://maven.apache.org</url>
