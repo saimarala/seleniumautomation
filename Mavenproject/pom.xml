@@ -29,7 +29,8 @@
 		</plugins>
 	</build>
     <modules>
-        <module>SeleniumCloud</module>
+        <module>test/selenium/SeleniumJava</module>
+        <module>test/selenium/SeleniumCloud</module>
     </modules>
     <packaging>pom</packaging>
 
