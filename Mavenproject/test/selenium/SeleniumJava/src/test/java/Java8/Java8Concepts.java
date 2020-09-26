@@ -1,4 +1,4 @@
-package MyPackage;
+package Java8;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -14,7 +14,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Java8 extends TestUtils {
+public class Java8Concepts extends TestUtils {
     @Test
     public void testing() {
         ArrayList<String> names = new ArrayList<String>();
