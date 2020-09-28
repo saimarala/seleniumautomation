@@ -6,9 +6,9 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import util.TestBase;
+import util.BaseTest;
 
-public class FirefoxOption extends TestBase {
+public class FirefoxOption extends BaseTest {
 
     @BeforeClass
     void setUp() {

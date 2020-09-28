@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
-import util.TestUtils;
+import util.SeleniumBase;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,7 +14,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Java8Concepts extends TestUtils {
+public class Java8Concepts extends SeleniumBase {
     @Test
     public void testing() {
         ArrayList<String> names = new ArrayList<String>();
@@ -86,7 +86,7 @@ public class Java8Concepts extends TestUtils {
 
     @Test
     public void testcol() throws Throwable {
-        TestUtils.getDriver("http://register.rediff.com/commonreg/index.php?redr=http://portfolio.rediff.com/money/jsp/loginnew.jsp?redr=home");
+        getDriver("http://register.rediff.com/commonreg/index.php?redr=http://portfolio.rediff.com/money/jsp/loginnew.jsp?redr=home","chrome");
         // List<WebElement> originalList=driver.findElements(By.xpath("//select[@id='city']"));
         List<WebElement> originalList = driver.findElements(By.xpath("//select[@id='country']"));
         List<String> origionalTextList = originalList.stream().map(s -> s.getText()).collect(Collectors.toList());

@@ -17,10 +17,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.locators.RelativeLocator;
 
 import org.testng.annotations.Test;
-import util.TestBase;
-import util.TestUtils;
+import util.BaseTest;
 
-public class Newtab extends TestBase {
+public class Newtab extends BaseTest {
     @Test
     void test() throws Exception {
 
