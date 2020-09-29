@@ -3,6 +3,7 @@ package util;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -40,7 +41,7 @@ public class SeleniumBase extends BaseTest {
         driver.manage().timeouts().implicitlyWait(IMPLICITY_WAIT, TimeUnit.MILLISECONDS);
     }
 
-
+@AfterClass
     public void tearDown() {
         driver.quit();
     }
