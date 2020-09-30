@@ -3,7 +3,6 @@ package Java8;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import util.SeleniumBase;
 
@@ -75,7 +74,7 @@ public class Java8Concepts extends SeleniumBase {
         List<Integer> values = Arrays.asList(3, 10, 1, 2, 3, 4, 5, 1, 2);
         //print unique numbe from array
         System.out.println("unique order");
-        values.stream().distinct().forEach(s -> System.out.println(s));
+        values.stream().distinct().forEach(s -> System.out.println("unique order:" + s));
         //sort the array
         System.out.println("Sorted order");
         values.stream().distinct().sorted().forEach(s -> System.out.println(s));
@@ -86,7 +85,7 @@ public class Java8Concepts extends SeleniumBase {
 
     @Test
     public void testcol() throws Throwable {
-        getDriver("http://register.rediff.com/commonreg/index.php?redr=http://portfolio.rediff.com/money/jsp/loginnew.jsp?redr=home","chrome");
+        getDriver("http://register.rediff.com/commonreg/index.php?redr=http://portfolio.rediff.com/money/jsp/loginnew.jsp?redr=home", "chrome");
         // List<WebElement> originalList=driver.findElements(By.xpath("//select[@id='city']"));
         List<WebElement> originalList = driver.findElements(By.xpath("//select[@id='country']"));
         List<String> origionalTextList = originalList.stream().map(s -> s.getText()).collect(Collectors.toList());
@@ -95,11 +94,5 @@ public class Java8Concepts extends SeleniumBase {
 
 
     }
-
-    @AfterClass
-    public void tearDown() {
-        driver.close();
-    }
-
 
 }

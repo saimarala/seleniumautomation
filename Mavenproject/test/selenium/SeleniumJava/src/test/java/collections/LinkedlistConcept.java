@@ -6,13 +6,13 @@ import java.util.LinkedList;
 
 public class LinkedlistConcept {
     public static void main(String[] args) {
-
+    //default value is 10
+        //insertion order is not preserved
         LinkedList<String> ls = new LinkedList<String>();
         ls.add("a");
         ls.add("b");
         ls.add("c");
         ls.add("d");
-
         System.out.println(ls);
 
         //remove
