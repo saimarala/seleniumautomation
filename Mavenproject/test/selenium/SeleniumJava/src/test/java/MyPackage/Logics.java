@@ -716,24 +716,31 @@ public class Logics {
 
         //HashMap
 
-//				String str="selenium";
-//				
-//				HashMap<Character ,Integer> charCountMap=new HashMap<Character ,Integer>();
-//				char[]ch=str.toCharArray();
-//				for(char c:ch) {
-//					
-//					if(charCountMap.containsKey(c)) {
-//						charCountMap.put(c, charCountMap.get(c)+1);
-//						//System.out.println(charCountMap.put(c, charCountMap.get(c)+1));
-//					}else {
-//						charCountMap.put(c, 1);
-//					}
-//				}
-//				
+				String str="selenium sai ";
+
+				HashMap<Character ,Integer> charCountMap=new HashMap<Character ,Integer>();
+				char[]ch=str.toCharArray();
+				for(char c:ch) {
+
+					if(charCountMap.containsKey(c)) {
+						charCountMap.put(c, charCountMap.get(c)+1);
+						//System.out.println(charCountMap.put(c, charCountMap.get(c)+1));
+					}else {
+						charCountMap.put(c, 1);
+					}
+				}
+
 //		        for(Map.Entry entry :charCountMap.entrySet()) {
-//		        	
+//
 //		        	System.out.println(entry.getKey()+"  "+entry.getValue());
 //		        }
+        //find occurance of duplicates
+        Set<Character> chrs=charCountMap.keySet();
+				for (char c:chrs){
+				    if (charCountMap.get(c)>1){
+				        System.out.println(c+":"+charCountMap.get(c));
+                    }
+                }
 
         //Java program to print alphabets
 //		        for(char ch='a';ch<='z';ch++) {
@@ -767,6 +774,29 @@ public class Logics {
 //		str1=str1.replace("selenium",z);
 //		System.out.println(str1);
 
+       // How do you count the number of occurrences of each character in a string?
+//        String str="This is Selenium with Java is";
+//        String[] words=str.split(" ");
+//        Map<String,Integer>wordcount=new HashMap<>();
+//        for (String word :words){
+//          if(wordcount.containsKey(word)){
+//              wordcount.put(word.toLowerCase(),wordcount.get(word)+1);
+//          }else{
+//              wordcount.put(word,1);
+//          }
+//        }
+////          // How do you count the number of occurrences of each character in a string?
+////        for(Map.Entry en:wordcount.entrySet()){
+////            System.out.println(en.getKey()+":"+en.getValue());
+////
+////        }
+// //       //*****************************************find occurance of duplicates
+//        Set<String>wordstring=wordcount.keySet();
+//        for (String word:wordstring){
+//            if(wordcount.get(word)>1){
+//                System.out.println(word+":"+wordcount.get(word));
+//            }
+//        }
 
     }
 
