@@ -5,14 +5,20 @@ import java.util.Iterator;
 
 public class ArrayListConcept {
 
-    public void main(String[] args) {
+    public static  void main(String[] args) {
 
         int a[] = new int[3];
+
+        //default value is 10
+        //insertion order is  preserved
+        //duplicates elements are allowed
+        //null  also preserved
 
         ArrayList ar = new ArrayList();
         ar.add("UFt");
         ar.add("java");
         ar.add("selenium");
+        ar.add(null);
         ar.add(1);
 
         System.out.println(ar);
