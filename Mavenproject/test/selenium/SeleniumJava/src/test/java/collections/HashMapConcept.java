@@ -21,7 +21,12 @@ public class HashMapConcept {
         //hashmap access all the threads
         //performance hashmap will be increase
         //concurent modification exception--fail-fast condition
-
+//******************
+        //Non-synchronized
+        //multiple thread alloed
+        //Not thread safe
+        //performance fast
+        //one null key and multiple null values
 
         HashMap<Integer, String> hm = new HashMap<Integer, String>();
         hm.put(1, "java");
@@ -30,7 +35,8 @@ public class HashMapConcept {
         hm.put(4, "UFT");
         hm.put(null, "UFT");
         hm.put(null, "UFT");
-        System.out.println(hm.get(1));
+
+       // System.out.println(hm.get(null));
         System.out.println(hm.get(8));//null
         System.out.println(hm.get(5));//null:UFT
         System.out.println(hm.get(null));

@@ -7,7 +7,9 @@ import java.util.LinkedList;
 public class LinkedlistConcept {
     public static void main(String[] args) {
     //default value is 10
-        //insertion order is not preserved
+        //insertion order is  preserved
+        //duplicates elements are allowed
+        //null valuse also prserved
         LinkedList<String> ls = new LinkedList<String>();
         ls.add("a");
         ls.add("b");

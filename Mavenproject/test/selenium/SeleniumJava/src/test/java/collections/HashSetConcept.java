@@ -10,8 +10,10 @@ public class HashSetConcept {
     void testHashSet() {
         //default capacity is 16 and  load factor 0.75
         // HashSet hs=new HashSet(100);//initial capacity is 100
-        //Duplicates not allowed
+        //Duplicates are not allowed
         //hash table data structure
+       // Insertion order not preserved
+        //elements will be inserted in hashcode 
         // HashSet hs=new HashSet(100, (float) 0.90);
         HashSet hs = new HashSet();//default capacity is 16 and  load factor 0.75
         hs.add("welcome");
@@ -19,6 +21,7 @@ public class HashSetConcept {
         hs.add('A');
         hs.add(true);
         hs.add(null);
+        hs.add('a');
         hs.add("Exit");
         System.out.println(hs);//Insertion order is not preserved
         // [null, A, 16.4, welcome, true, Exit]
