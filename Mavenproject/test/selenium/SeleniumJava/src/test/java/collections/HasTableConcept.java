@@ -6,7 +6,7 @@ import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Set;
 
-public class HasTableCocnept {
+public class HasTableConcept {
 
     //it is similar to hashmap,but it is synchronised
     //store the value on the basis of key-value
@@ -17,6 +17,14 @@ public class HasTableCocnept {
     //one thread completes then second thread will come
     //it contains only unique values
     //no null key and no null values
+
+    //************************
+    //synchronized
+    //one thread allowed at a time
+    //thread safe
+    //perfroamnce slow
+    //nulls cannot accepect
+    //capacity is 11 and load factor is 0.75
     @Test
     void testhashTable(){
         Hashtable h1=new Hashtable();
