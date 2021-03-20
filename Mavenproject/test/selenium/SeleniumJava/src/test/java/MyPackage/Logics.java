@@ -716,31 +716,31 @@ public class Logics {
 
         //HashMap
 
-				String str="selenium sai ";
-
-				HashMap<Character ,Integer> charCountMap=new HashMap<Character ,Integer>();
-				char[]ch=str.toCharArray();
-				for(char c:ch) {
-
-					if(charCountMap.containsKey(c)) {
-						charCountMap.put(c, charCountMap.get(c)+1);
-						//System.out.println(charCountMap.put(c, charCountMap.get(c)+1));
-					}else {
-						charCountMap.put(c, 1);
-					}
-				}
-
+//				String str="selenium sai ";
+//
+//				HashMap<Character ,Integer> charCountMap=new HashMap<Character ,Integer>();
+//				char[]ch=str.toCharArray();
+//				for(char c:ch) {
+//
+//					if(charCountMap.containsKey(c)) {
+//						charCountMap.put(c, charCountMap.get(c)+1);
+//						//System.out.println(charCountMap.put(c, charCountMap.get(c)+1));
+//					}else {
+//						charCountMap.put(c, 1);
+//					}
+//				}
+//
 //		        for(Map.Entry entry :charCountMap.entrySet()) {
 //
 //		        	System.out.println(entry.getKey()+"  "+entry.getValue());
 //		        }
-        //find occurance of duplicates
-        Set<Character> chrs=charCountMap.keySet();
-				for (char c:chrs){
-				    if (charCountMap.get(c)>1){
-				        System.out.println(c+":"+charCountMap.get(c));
-                    }
-                }
+//        //find occurance of duplicates
+//        Set<Character> chrs=charCountMap.keySet();
+//				for (char c:chrs){
+//				    if (charCountMap.get(c)>1){
+//				        System.out.println(c+":"+charCountMap.get(c));
+//                    }
+//                }
 
         //Java program to print alphabets
 //		        for(char ch='a';ch<='z';ch++) {
@@ -797,6 +797,21 @@ public class Logics {
 //                System.out.println(word+":"+wordcount.get(word));
 //            }
 //        }
+
+		//Print hello world without using semi colon (;)
+        //1
+		if(System.out.printf("hello world "+"\n")==null){
+		}
+		//2
+		if(System.out.append("hello world"+"\n")==null){
+        }
+		//3
+        if(System.out.append("hello world"+"\n").equals(null)){
+        }
+        //4
+        for (int i=0;i<1;System.out.println("hello world")){
+            i++;
+        }
 
     }
 

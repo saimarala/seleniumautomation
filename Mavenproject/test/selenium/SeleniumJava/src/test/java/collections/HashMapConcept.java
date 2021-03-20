@@ -47,21 +47,21 @@ public class HashMapConcept {
         }
         hm.remove(4);
         System.out.println(hm);
-        System.out.println("***********");
-        HashMap<Integer, Employee> e = new HashMap<Integer, Employee>();
-        Employee e1 = new Employee("sai", 22, "QA");
-        Employee e2 = new Employee("sailo", 32, "QA");
-        e.put(1, e1);
-        e.put(2, e2);
-        //travse the hashmap
-        for (Entry<Integer, Employee> m1 : e.entrySet()) {
-            int key = m1.getKey();
-            Employee emp = m1.getValue();
-            System.out.println("Employee " + key + " info");
-
-            System.out.println(emp.name + " " + emp.age + " " + emp.dept);
-
-        }
+//        System.out.println("***********");
+//        HashMap<Integer, Employee> e = new HashMap<Integer, Employee>();
+//        Employee e1 = new Employee("sai", 22, "QA");
+//        Employee e2 = new Employee("sailo", 32, "QA");
+//        e.put(1, e1);
+//        e.put(2, e2);
+//        //travse the hashmap
+//        for (Entry<Integer, Employee> m1 : e.entrySet()) {
+//            int key = m1.getKey();
+//            Employee emp = m1.getValue();
+//            System.out.println("Employee " + key + " info");
+//
+//            System.out.println(emp.name + " " + emp.age + " " + emp.dept);
+//
+//        }
         System.out.println("***entrySet***");
         Set s = hm.entrySet();
         System.out.println(s);//[1=java, 2=selenium, 3=autoamtion]
