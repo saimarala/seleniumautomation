@@ -1,15 +1,6 @@
 package MyPackage;
 
 
-import java.net.InetAddress;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Random;
-import java.util.Scanner;
-import java.util.Set;
-
 public class Logics {
 
     public static void main(String[] args) {
@@ -497,15 +488,15 @@ public class Logics {
         //For example, when you create string objects using string literal like below, they will be stored in the String Constant Pool.
 //				String s1="sel";
 //				String s2="sel";
-//				System.out.println(s1==s2);
+//				System.out.println(s1==s2);//true
 //				//And when you create string objects using new keyword like below, they will be stored in the heap memory.
 //				String s3=new String("sel");
 //				String s4=new String("sel1");
-//				System.out.println(s3==s4);
+//				System.out.println(s3==s4);//false
 //				//In simple words, there can not be two string objects with same content in the string constant pool. But, there can be two string objects with the same content in the heap memory.
 //				String s5=new String("Hello");
 //				String s6="Hello";
-//				System.out.println(s5 == s6);
+//				System.out.println(s5 == s6);//false
 
         //switch case
 
@@ -774,7 +765,7 @@ public class Logics {
 //		str1=str1.replace("selenium",z);
 //		System.out.println(str1);
 
-       // How do you count the number of occurrences of each character in a string?
+        // How do you count the number of occurrences of each character in a string?
 //        String str="This is Selenium with Java is";
 //        String[] words=str.split(" ");
 //        Map<String,Integer>wordcount=new HashMap<>();
@@ -798,20 +789,53 @@ public class Logics {
 //            }
 //        }
 
-		//Print hello world without using semi colon (;)
+        //Print hello world without using semi colon (;)
         //1
-		if(System.out.printf("hello world "+"\n")==null){
-		}
-		//2
-		if(System.out.append("hello world"+"\n")==null){
-        }
-		//3
-        if(System.out.append("hello world"+"\n").equals(null)){
-        }
-        //4
-        for (int i=0;i<1;System.out.println("hello world")){
-            i++;
-        }
+//		if(System.out.printf("hello world "+"\n")==null){
+//		}
+//		//2
+//		if(System.out.append("hello world"+"\n")==null){
+//        }
+//		//3
+//        if(System.out.append("hello world"+"\n").equals(null)){
+//        }
+//        //4
+//        for (int i=0;i<1;System.out.println("hello world")){
+//            i++;
+//        }
+
+//        //  output numbers from 1 to 100 without using numbers in your code
+//       int one = 'A' / 'A';//1
+//        String s1 = "..........";
+//        for (int i = one; i <= s1.length() * s1.length(); i++) {
+//            System.out.println(i);
+//        }
+
+//        //a-97 b-98 c-99 d-99
+//        for (int i=one;i<='d';i++){
+//            System.out.println(i);
+//        }
+        //Compare two int numbers (Integer caching)
+//        //-128 to 127
+//        Integer num1=100;
+//        Integer num2=100;
+//        if(num1==num2){
+//            System.out.println("both are equal");
+//        }else{
+//            System.out.println("both are not equal");
+//        }
+        //What will be the output when you divide a number by zero?
+        //Number=Integer,Double,Float
+        System.out.println(9.0/0);//Infinity
+        System.out.println(22.33f/0);//Infinity
+        System.out.println(10/0.0);//Infinity
+        System.out.println(19.999999d/0);//Infinity
+//        System.out.println(1/0);//Arithmetic exception
+//        System.out.println(0/0);//Arithmetic exception
+        System.out.println(0.0/0);//NaN
+        System.out.println(0.0/0.0);//NaN
+        System.out.println(12.33/0.0);//Infinity
+
 
     }
 
