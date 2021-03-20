@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SeleniumBase extends BaseTest {
 
-    public  void getDriver(String url, String browserName) throws Throwable {
+    public   void getDriver(String url, String browserName) throws Throwable {
         Properties prop = new Properties();
 
         try {
