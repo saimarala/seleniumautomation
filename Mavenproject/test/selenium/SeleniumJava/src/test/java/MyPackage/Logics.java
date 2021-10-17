@@ -1,6 +1,8 @@
 package MyPackage;
 
 
+import java.util.Scanner;
+
 public class Logics {
 
     public static void main(String[] args) {
@@ -10,13 +12,10 @@ public class Logics {
 				x=x+y;
 				y=x-y;
 				x=x-y;
-
 				System.out.println(x);
 				System.out.println(y);*/
 
-
         //fibonacci series
-        //
 //				int n1=0,n2=1,num=10;
 //				int n3=0;
 //				System.out.print(n1+" "+n2);
@@ -25,7 +24,6 @@ public class Logics {
 //					System.out.print(" "+n3);
 //					n1=n2;
 //					n2=n3;
-        //
 //				}
 
         //factorial
@@ -36,23 +34,22 @@ public class Logics {
 //					fact=fact*i;
 //				}
 //				System.out.println("factorial "+num+"is: "+fact);
-				/*prime or not
-				int  flag=0;
-				int x=17;
-
-				for(int i=2;i<x;i++) {
-					if(x%i==0)
-					{
-						flag=1;
-					}
-				}
-
-				if(flag==0) {
-					System.out.println("prime");
-				}
-					else {
-						System.out.println("not prime");
-				}*/
+				//prime or not
+//				  boolean flag=false;
+//				int num=3;
+//
+//				for(int i=2;i<num;i++) {
+//					if(num%i==0)
+//					{
+//						flag=true;
+//						break;
+//					}
+//				}
+//				if(!flag) {
+//					System.out.println("prime");
+//				} else {
+//				    System.out.println("not prime");
+//				}
 
 				/*
 				 * *
@@ -120,40 +117,31 @@ public class Logics {
 //								int num=sc.nextInt();
 //							int num=5;
 //								
-//								for(int i=1;i<10;i++) {
-//									
+//								for(int i=1;i<10;i++) {//
 //									System.out.println(num+"*"+i+"="+(num*i));
 //								}
         //sum of given number
 
-        //		int num;
-        //		int sum=0,rem=0;
-        //		Scanner sc=new Scanner(System.in);
-        //		System.out.println("enter the num");
-        //		num=sc.nextInt();
-        //
-        //
-        //		while(num>0) {
-        //			rem=num%10;
-        //			sum=sum+rem;
-        //			num=num/10;
-        //
-        //		}
-        //	System.out.println(sum);
+//        		int num;
+//        		int sum=0;
+//        		Scanner sc=new Scanner(System.in);
+//        		System.out.println("enter the num");
+//        		num=sc.nextInt();
+//        		while(num>0) {
+//        			sum=sum+num%10;
+//        			num=num/10;
+//        		}
+ //       	System.out.println(sum);
 
 
         //Palindrome number
 
 //						int num=343;
 //						int sum=0;
-//						int rem=0;
 //						int  temp=num;
-//						
 //						while(num>0) {
-//							rem=num%10;
-//							sum=(sum*10)+rem;
+//							sum=(sum*10)+num%10;
 //							num=num/10;
-//									
 //						}
 //						if(temp==sum) {
 //							System.out.println("Palindrome number"+sum);
@@ -162,18 +150,17 @@ public class Logics {
 //							System.out.println("not Palindrome number");
 //						}
 
-
         //Armstrong number
 
 //						int num=153;
 //						int rem=0;
 //						int sum=0;
 //						int temp=num;
-//						
+//
 //						while(num!=0) {
 //							rem=num%10;
+//        					sum=sum+(rem*rem*rem);
 //							num=num/10;
-//							sum=sum+(rem*rem*rem);
 //						}
 //						if(sum==temp) {
 //							System.out.println("Armstrong number");
@@ -181,7 +168,6 @@ public class Logics {
 //						else {
 //							System.out.println("not Armstrong number");
 //						}
-
 
         //even or odd
 
@@ -246,6 +232,7 @@ public class Logics {
         //		for(String i:list) {
         //			System.out.println(i);
         //		}
+
         //
         //		int arr[]=new int[5];
         //		System.out.println(arr.length);
@@ -826,15 +813,15 @@ public class Logics {
 //        }
         //What will be the output when you divide a number by zero?
         //Number=Integer,Double,Float
-        System.out.println(9.0/0);//Infinity
-        System.out.println(22.33f/0);//Infinity
-        System.out.println(10/0.0);//Infinity
-        System.out.println(19.999999d/0);//Infinity
+        System.out.println(9.0 / 0);//Infinity
+        System.out.println(22.33f / 0);//Infinity
+        System.out.println(10 / 0.0);//Infinity
+        System.out.println(19.999999d / 0);//Infinity
 //        System.out.println(1/0);//Arithmetic exception
 //        System.out.println(0/0);//Arithmetic exception
-        System.out.println(0.0/0);//NaN
-        System.out.println(0.0/0.0);//NaN
-        System.out.println(12.33/0.0);//Infinity
+        System.out.println(0.0 / 0);//NaN
+        System.out.println(0.0 / 0.0);//NaN
+        System.out.println(12.33 / 0.0);//Infinity
 
 
     }
