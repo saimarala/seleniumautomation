@@ -1,7 +1,8 @@
 package MyPackage;
 
 
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Logics {
 
@@ -530,21 +531,22 @@ public class Logics {
 //				System.out.println("before swapping");
 //				System.out.println("the value of a is:"+a);
 //				System.out.println("the value of b is:"+b);
-//				
+//
 //				//append a and b
+//		//System.out.println("test :"+b.substring(0));
 //				a=a+b;//helloworld
 //				//store initial string a in string b
 //				b=a.substring(0,a.length()-b.length());
 //				//store initial string b in string a
 //				a=a.substring(b.length());
-//				
+//
 //				System.out.println("after swapping");
-//				
+//
 //				System.out.println("the value of a is:"+a);
 //				System.out.println("the value of b is:"+b);
-
+				//Remove the duplicates in the string
 //				String names[]= {"java","JavaScript","Ruby","java","Ruby","dd"};
-//				Set<String>store=new HashSet<String>();
+//				Set<String> store=new HashSet<String>();
 //				for(String name:names) {
 //					if(store.add(name)==false) {
 //						System.out.println("duplicate element is :"+name);
@@ -563,6 +565,22 @@ public class Logics {
 //					}
 //				}
 //				System.out.println(store);
+		//Set
+		List<Integer> numbers=Arrays.asList(1,2,2,4,4,3,5,6,7,8,9,1,0,-1,-1,-2);
+		List<String> names=new ArrayList<>(Arrays.asList("Java","Ruby","Selenium","Java","Pyton","test","test"));
+		Set<String> linkedHashSet=new LinkedHashSet<>(names);
+		System.out.println(linkedHashSet);
+		Set<Integer> hashSet=new HashSet<>(numbers);
+		System.out.println(hashSet);
+		List<Integer>  numbersListWithoutDuplicate=new ArrayList<>(hashSet);
+		System.out.println(numbersListWithoutDuplicate);
+		//JDk 8 -Stream :
+		Set<String> marks=names.stream().distinct().collect(Collectors.toSet());
+		System.out.println(names.stream().distinct().collect(Collectors.toSet()));
+		System.out.println(marks);
+
+
+
 //				
 //				
 //			int a=1000,b=000,c=300;
@@ -813,15 +831,15 @@ public class Logics {
 //        }
         //What will be the output when you divide a number by zero?
         //Number=Integer,Double,Float
-        System.out.println(9.0 / 0);//Infinity
-        System.out.println(22.33f / 0);//Infinity
-        System.out.println(10 / 0.0);//Infinity
-        System.out.println(19.999999d / 0);//Infinity
-//        System.out.println(1/0);//Arithmetic exception
-//        System.out.println(0/0);//Arithmetic exception
-        System.out.println(0.0 / 0);//NaN
-        System.out.println(0.0 / 0.0);//NaN
-        System.out.println(12.33 / 0.0);//Infinity
+//        System.out.println(9.0 / 0);//Infinity
+//        System.out.println(22.33f / 0);//Infinity
+//        System.out.println(10 / 0.0);//Infinity
+//        System.out.println(19.999999d / 0);//Infinity
+////        System.out.println(1/0);//Arithmetic exception
+////        System.out.println(0/0);//Arithmetic exception
+//        System.out.println(0.0 / 0);//NaN
+//        System.out.println(0.0 / 0.0);//NaN
+//        System.out.println(12.33 / 0.0);//Infinity
 
 
     }
