@@ -576,11 +576,10 @@ public class Logics {
 		System.out.println(numbersListWithoutDuplicate);
 		//JDk 8 -Stream :
 		Set<String> marks=names.stream().distinct().collect(Collectors.toSet());
+		Set<String> set=names.stream().collect(Collectors.toSet());
 		System.out.println(names.stream().distinct().collect(Collectors.toSet()));
 		System.out.println(marks);
-
-
-
+		System.out.println("set:"+marks);
 //				
 //				
 //			int a=1000,b=000,c=300;
