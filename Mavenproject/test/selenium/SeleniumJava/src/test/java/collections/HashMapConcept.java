@@ -3,6 +3,7 @@ package collections;
 import org.testng.annotations.Test;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -65,6 +66,7 @@ public class HashMapConcept {
         System.out.println("***entrySet***");
         Set s = hm.entrySet();
         System.out.println(s);//[1=java, 2=selenium, 3=autoamtion]
+        System.out.println("values :"+hm.values());
         if (hm.containsValue("java"))
             System.out.println("value is found");
         System.out.println(hm);//{1=java, 2=selenium, 3=autoamtion}
