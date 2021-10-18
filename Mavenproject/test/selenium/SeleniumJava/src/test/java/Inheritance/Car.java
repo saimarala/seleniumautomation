@@ -1,6 +1,6 @@
 package Inheritance;
 
-public class Car {
+public class Car extends Vechile{
 
     public void start() {
         System.out.println("car---start");
