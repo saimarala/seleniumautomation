@@ -35,23 +35,6 @@ public class Logics {
 //					fact=fact*i;
 //				}
 //				System.out.println("factorial "+num+"is: "+fact);
-				//prime or not
-//				  boolean flag=false;
-//				int num=3;
-//
-//				for(int i=2;i<num;i++) {
-//					if(num%i==0)
-//					{
-//						flag=true;
-//						break;
-//					}
-//				}
-//				if(!flag) {
-//					System.out.println("prime");
-//				} else {
-//				    System.out.println("not prime");
-//				}
-
 				/*
 				 * *
 				 * ***
@@ -363,37 +346,26 @@ public class Logics {
 //				}
 //				
 //				System.out.println(reverse);
-//				
-
-//
-//
+//				//ascendening order
 //					int arr[]= {1,9,6,2,5,8};
 //					int n=arr.length;
 //					//System.out.println(n);
-//							
+//
 //					int temp=0;
 //					for(int i=0;i<n;i++){
-//						
 //						for(int j=i+1;j<n;j++) {
 //							if(arr[i]>arr[j]) {
 //								temp=arr[i];
 //								arr[i]=arr[j];
-//								arr[j]=temp;				
-//								
+//								arr[j]=temp;
 //							}
-//							
 //						}
-//						
-//						
 //					}
-//						
-//						
-//				    for (int i = 0; i < arr.length; i++) {     
-//				        System.out.print(arr[i] + " "); 
-//				        
-//				    } 	
-//					System.out.println();	
-        //    System.out.println(n-3);
+//				    for (int i = 0; i < arr.length; i++) {
+//				        System.out.print(arr[i] + " ");
+//				    }
+//					System.out.println();
+//            System.out.println(n);
         //split alphanumeric
 //				StringBuffer alpha=new StringBuffer(),num=new StringBuffer(),special=new StringBuffer();
 //				String num1="";
@@ -421,12 +393,27 @@ public class Logics {
 //				for(;;) {
 //					System.out.println("sel");
 //				}
-        //list of prime numbers
+		//prime or not
+//		boolean flag=false;
+//		int num=4;
+//
+//		for(int i=2;i<num;i++) {
+//			if(num%i==0)
+//			{
+//				flag=true;
+//				break;
+//			}
+//		}
+//		if(!flag) {
+//			System.out.println("prime");
+//		} else {
+//			System.out.println("not prime");
+//		}
 
-//				
+		//list of prime numbers
 //				int limit=100;
 //				int flag=0;
-//				for(int i=1;i<limit;i++) {
+//				for(int i=2;i<limit;i++) {
 //					flag=0;
 //					for(int j=2;j<i;j++) {
 //						if(i%j==0) {
@@ -434,12 +421,10 @@ public class Logics {
 //							break;
 //						}
 //					}
-//						
 //					if(flag==0) {
 //						System.out.print(i +" ");
 //					}
 //				}
-
         //largest number & smallest number
 
 //				int a[]={2,4,5,10,8,7,2};
@@ -452,11 +437,7 @@ public class Logics {
 //					}else if(a[i]<smallest) {
 //						smallest=a[i];
 //					}
-//					
-//					
-//				
 //			}
-        //
 //				System.out.println("largest :"+largest);
 //				System.out.println("smallest :"+smallest);
 
@@ -477,14 +458,18 @@ public class Logics {
 //				String s1="sel";
 //				String s2="sel";
 //				System.out.println(s1==s2);//true
-//				//And when you create string objects using new keyword like below, they will be stored in the heap memory.
+//				System.out.println(s1.equals(s2));//true
+////				//And when you create string objects using new keyword like below, they will be stored in the heap memory.
 //				String s3=new String("sel");
-//				String s4=new String("sel1");
+//				String s4=new String("sel");
 //				System.out.println(s3==s4);//false
-//				//In simple words, there can not be two string objects with same content in the string constant pool. But, there can be two string objects with the same content in the heap memory.
+//				System.out.println(s3.equals(s4));//true
+////				//In simple words, there can not be two string objects with same content in the string constant pool.
+////				But, there can be two string objects with the same content in the heap memory.
 //				String s5=new String("Hello");
 //				String s6="Hello";
 //				System.out.println(s5 == s6);//false
+//				System.out.println(s5.equals(s6));//true
 
         //switch case
 
@@ -538,10 +523,8 @@ public class Logics {
 //				//store initial string a in string b
 //				b=a.substring(0,a.length()-b.length());
 //				//store initial string b in string a
-//				a=a.substring(b.length());
-//
-//				System.out.println("after swapping");
-//
+//				a=a.substring(b.length());//
+//				System.out.println("after swapping");//
 //				System.out.println("the value of a is:"+a);
 //				System.out.println("the value of b is:"+b);
 				//Remove the duplicates in the string
@@ -566,47 +549,43 @@ public class Logics {
 //				}
 //				System.out.println(store);
 		//Set
-		List<Integer> numbers=Arrays.asList(1,2,2,4,4,3,5,6,7,8,9,1,0,-1,-1,-2);
-		List<String> names=new ArrayList<>(Arrays.asList("Java","Ruby","Selenium","Java","Pyton","test","test"));
-		Set<String> linkedHashSet=new LinkedHashSet<>(names);
-		System.out.println(linkedHashSet);
-		Set<Integer> hashSet=new HashSet<>(numbers);
-		System.out.println(hashSet);
-		List<Integer>  numbersListWithoutDuplicate=new ArrayList<>(hashSet);
-		System.out.println(numbersListWithoutDuplicate);
-		//JDk 8 -Stream :
-		Set<String> marks=names.stream().distinct().collect(Collectors.toSet());
-		Set<String> set=names.stream().collect(Collectors.toSet());
-		System.out.println(names.stream().distinct().collect(Collectors.toSet()));
-		System.out.println(marks);
-		System.out.println("set:"+marks);
+//		List<Integer> numbers=Arrays.asList(1,2,2,4,4,3,5,6,7,8,9,1,0,-1,-1,-2);
+//		List<String> names=new ArrayList<>(Arrays.asList("Java","Ruby","Selenium","Java","Pyton","test","test"));
+//		Set<String> linkedHashSet=new LinkedHashSet<>(names);
+//		System.out.println(linkedHashSet);
+//		Set<Integer> hashSet=new HashSet<>(numbers);
+//		System.out.println(hashSet);
+//		List<Integer>  numbersListWithoutDuplicate=new ArrayList<>(hashSet);
+//		System.out.println(numbersListWithoutDuplicate);
+//		//JDk 8 -Stream :
+//		Set<String> marks=names.stream().distinct().collect(Collectors.toSet());
+//		Set<String> set=names.stream().collect(Collectors.toSet());
+//		System.out.println(names.stream().distinct().collect(Collectors.toSet()));
+//		System.out.println(marks);
+//		System.out.println("set:"+marks);
 //				
 //				
 //			int a=1000,b=000,c=300;
-//				
-//				if(a>b & a>c){
+//				if(a>b && a>c){// a && B it executes both the conditions
+		// a && b if first condition is true then only it executes second condition
+		//a || b if first condition is false then only it executes second condition
 //					System.out.println("a is greater");
-//					
 //					}
 //				else if(b>c){
-//						
-//					
 //					System.out.println("b is greater");
-//					
 //				}
 //				else {
 //					System.out.println("c is greater");
 //				}
 
-//				
 //				String str = "this # Is$ selenium123 Testing4";
-//			//	str = str.replaceAll("[a-zA-Z0-9]", "");
-//			//	str=str.replaceAll("[^0-9]","");
-//				str=str.replaceAll("[^a-zA-Z0-9]", "");
+//				//str = str.replaceAll("[a-zA-Z0-9]", "");
+//				//str=str.replaceAll("[^0-9]","");
+//				//str=str.replaceAll("[^a-zA-Z0-9]", "");
 //				System.out.println(str);
 
-//				String[] str = { "GEEKS", "FOR", "GEEKS" }; 
-//		        System.out.println(str[0].length()); 
+//				String[] str = { "GEEKS", "FOR", "GEEKS" };
+//		        System.out.println(str[0].length());
 
 //		        
 //		        String str="he selenium";
@@ -614,9 +593,8 @@ public class Logics {
 //		        System.out.println(s.reverse());
 
         //how to find missing numbers in array
-//				
-//				int a[]= {1,2,3,5};
-//				
+
+//				int a[]= {1,3,4,5};
 //				int sum=0;
 //				for(int i=0;i<a.length;i++) {
 //					sum=sum+a[i];
@@ -625,7 +603,6 @@ public class Logics {
 //				int sum1=0;
 //				for(int j=1;j<=5;j++) {
 //					sum1=sum1+j;
-//					
 //				}
 //				System.out.println(sum1);
 //				System.out.println("missing number:"+(sum1-sum));
@@ -634,7 +611,7 @@ public class Logics {
 //			char ch[]=str.toCharArray();
 //			int count=0;
 //			for(char c:ch) {
-//				
+//
 //				switch(c){
 //				case 'a':
 //				case 'e':
@@ -643,19 +620,17 @@ public class Logics {
 //				case 'u':
 //					count++;
 //					//break;
-//				
 //				}
-//				
+//
 //			}
 //			System.out.println(count);
 
 //			int count=0;
 //				String str="this is selenium";
 //				String str2="";
-//				//char ch[]=str.toCharArray();
+//				char ch[]=str.toCharArray();
 //				for(int i=0;i<str.length();i++) {
 //					char w=str.charAt(i);
-//							
 //					if(w=='a' ||w=='e'||w=='i'||w=='o'||w=='u') {
 //						System.out.print(w+" ");
 //						count++;
@@ -666,7 +641,18 @@ public class Logics {
 //				System.out.println("");
 //				System.out.println(count);
 //				System.out.println(str2);
-
+//			for (int i=0;i<str.length();i++){
+//				char w=str.charAt(i);
+//				if(w=='a' ||w=='e'||w=='i'||w=='o'||w=='u') {
+//					System.out.print(w+" ");
+//					count++;
+//				}	else {
+//					str2 = str2 + w;
+//				}
+//			}
+//		        System.out.println("");
+//				System.out.println(count);
+//				System.out.println(str2);
 //				String s="java";
 //				String s1="java";
 //				s1="selenium";
@@ -691,53 +677,71 @@ public class Logics {
 //		        
 //		        String s="mmababctamantlslmag";
 //		        int count = 0 ;
-        //
 //		        for (int i = 0; i < s.length(); i++) {
-        //
+//
 //		            for (int j = 0; j < s.length(); j++) {
-        //
+//
 //		                if(s.charAt(i)==s.charAt(j))
 //		                {
-//		                    count++;
-        //
+//		                	count++;
 //		                }
-//		            }   
+//		            }
 //		            System.out.println(s.charAt(i)+"--"+count);
 //		            String d1=String.valueOf(s.charAt(i)).trim();
 //		            s=s.replaceAll(d1,"");
 //		            count = 0;
-//		            
 //		        }
 
-        //HashMap
-
-//				String str="selenium sai ";
-//
+             //HashMap
+//				String str="selenium sai sai ";
 //				HashMap<Character ,Integer> charCountMap=new HashMap<Character ,Integer>();
 //				char[]ch=str.toCharArray();
 //				for(char c:ch) {
-//
 //					if(charCountMap.containsKey(c)) {
 //						charCountMap.put(c, charCountMap.get(c)+1);
-//						//System.out.println(charCountMap.put(c, charCountMap.get(c)+1));
 //					}else {
 //						charCountMap.put(c, 1);
 //					}
 //				}
-//
 //		        for(Map.Entry entry :charCountMap.entrySet()) {
-//
 //		        	System.out.println(entry.getKey()+"  "+entry.getValue());
 //		        }
-//        //find occurance of duplicates
-//        Set<Character> chrs=charCountMap.keySet();
+//          //find occurance of duplicates
+//		System.out.println("find occurance of duplicates");
+//         Set<Character> chrs=charCountMap.keySet();
 //				for (char c:chrs){
 //				    if (charCountMap.get(c)>1){
 //				        System.out.println(c+":"+charCountMap.get(c));
 //                    }
 //                }
 
-        //Java program to print alphabets
+		// How do you count the number of occurrences of each word in a string?
+//		String str="This is Selenium with Java is";
+//		String[] words=str.split(" ");
+//		Map<String,Integer>wordcount=new HashMap<>();
+//		for (String word :words){
+//			if(wordcount.containsKey(word)){
+//				wordcount.put(word.toLowerCase(),wordcount.get(word)+1);
+//			}else{
+//				wordcount.put(word.toLowerCase(),1);
+//			}
+//		}
+////          // How do you count the number of occurrences of each character in a string?
+//		for(Map.Entry en:wordcount.entrySet()){
+//			System.out.println(en.getKey()+":"+en.getValue());
+//
+//		}
+//		//       //*****************************************find occurance of duplicates
+//		System.out.println("find occurance of duplicates");
+//		Set<String>wordstring=wordcount.keySet();
+//		for (String word:wordstring){
+//			if(wordcount.get(word)>1){
+//				System.out.println(word+":"+wordcount.get(word));
+//			}
+//		}
+
+
+		//Java program to print alphabets
 //		        for(char ch='a';ch<='z';ch++) {
 //		        	System.out.println(ch);
 //		        }
@@ -769,29 +773,6 @@ public class Logics {
 //		str1=str1.replace("selenium",z);
 //		System.out.println(str1);
 
-        // How do you count the number of occurrences of each character in a string?
-//        String str="This is Selenium with Java is";
-//        String[] words=str.split(" ");
-//        Map<String,Integer>wordcount=new HashMap<>();
-//        for (String word :words){
-//          if(wordcount.containsKey(word)){
-//              wordcount.put(word.toLowerCase(),wordcount.get(word)+1);
-//          }else{
-//              wordcount.put(word,1);
-//          }
-//        }
-////          // How do you count the number of occurrences of each character in a string?
-////        for(Map.Entry en:wordcount.entrySet()){
-////            System.out.println(en.getKey()+":"+en.getValue());
-////
-////        }
-// //       //*****************************************find occurance of duplicates
-//        Set<String>wordstring=wordcount.keySet();
-//        for (String word:wordstring){
-//            if(wordcount.get(word)>1){
-//                System.out.println(word+":"+wordcount.get(word));
-//            }
-//        }
 
         //Print hello world without using semi colon (;)
         //1
@@ -808,8 +789,8 @@ public class Logics {
 //            i++;
 //        }
 
-//        //  output numbers from 1 to 100 without using numbers in your code
-//       int one = 'A' / 'A';//1
+////        //  output numbers from 1 to 100 without using numbers in your code
+//       int one = 'Z' / 'Z';//1
 //        String s1 = "..........";
 //        for (int i = one; i <= s1.length() * s1.length(); i++) {
 //            System.out.println(i);
@@ -832,7 +813,7 @@ public class Logics {
         //Number=Integer,Double,Float
 //        System.out.println(9.0 / 0);//Infinity
 //        System.out.println(22.33f / 0);//Infinity
-//        System.out.println(10 / 0.0);//Infinity
+ //       System.out.println(10 / 0.0);//Infinity
 //        System.out.println(19.999999d / 0);//Infinity
 ////        System.out.println(1/0);//Arithmetic exception
 ////        System.out.println(0/0);//Arithmetic exception
@@ -840,7 +821,5 @@ public class Logics {
 //        System.out.println(0.0 / 0.0);//NaN
 //        System.out.println(12.33 / 0.0);//Infinity
 
-
     }
-
 }
