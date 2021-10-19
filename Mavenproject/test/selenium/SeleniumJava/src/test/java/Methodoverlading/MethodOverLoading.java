@@ -8,6 +8,8 @@ public class MethodOverLoading {
         obj.sum(10);
         obj.sum(20.22);
         obj.sum(10,20);
+        main(100);
+        main(50,70);
 
     }
     //you can not create a method inside a method
@@ -33,10 +35,12 @@ public class MethodOverLoading {
     }
 
     public static void main(int a) {//we can overload main method also
-        System.out.println("main");
+        System.out.println("main 1 param");
+        System.out.println(a);
     }
 
     public static void main(int a,int b) {
-
+        System.out.println("main 2 param");
+        System.out.println(a+b);
     }
 }
