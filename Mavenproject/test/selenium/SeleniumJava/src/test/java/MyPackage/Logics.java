@@ -1,8 +1,14 @@
 package MyPackage;
 
 
+import org.apache.commons.lang3.StringUtils;
+import org.jsoup.helper.StringUtil;
+
+import java.io.*;
 import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Logics {
 
@@ -35,18 +41,17 @@ public class Logics {
 //					fact=fact*i;
 //				}
 //				System.out.println("factorial "+num+"is: "+fact);
-				/*
-				 * *
-				 * ***
-				 *
 
+//				// *
+//				// **
+//				// ***
 
-				for(int i=1;i<=5;i++) {
-					for(int j=1;j<=i;j++) {
-						System.out.print("*");
-					}
-					System.out.println("");
-				}*/
+//				for(int i=1;i<=5;i++) {
+//					for(int j=1;j<=i;j++) {
+//						System.out.print("*");
+//					}
+//					System.out.println("");
+//				}
 
 				/*	int l=5;
 
@@ -62,22 +67,65 @@ public class Logics {
 					}
 					System.out.println("");
 				}*/
-				/*int l=5;
-				for(int i=1;i<=5;i++) {
-						//spaces
-					for(int k=l-1;k>=i;k--) {
-						System.out.print(" ");
-					}
+        //*
+        // ***
+        // *****
+        // *******
+        //*********
+//				int l=5;
+//				for(int i=1;i<=5;i++) {
+//						//spaces
+//					for(int k=l-1;k>=i;k--) {
+//						System.out.print(" ");
+//					}
+//
+//					for(int j=1;j<=i;j++) {
+//						System.out.print("*");
+//						//System.out.print(j+" ");
+//					}
+//
+//					for(int w=1;w<i;w++) {
+//						System.out.print("*");
+//						//System.out.print(w+" ");
+//					}
+//					System.out.println("");
+//				}
+        //number pattern
+        //1
+        //1 2
+        //1 2 3
+        //1 2 3 4
+        //1 2 3 4 5
+//		for(int i=1;i<=5;i++){
+//			for (int j=1;j<=i;j++){
+//				System.out.print(j+" ");
+//			}
+//			System.out.println("");
+//		}
+        //*
+        //**
+        //***
+        //****
+        //*****
+        //****
+        //***
+        //**
+        //*
 
-					for(int j=1;j<=i;j++) {
-						System.out.print("*");
-					}
-
-					for(int w=1;w<i;w++) {
-						System.out.print("*");
-					}
-					System.out.println("");
-				}*/
+//		for(int i=1;i<=5;i++){
+//			for (int j=1;j<=i;j++){
+//				//System.out.print(j+" ");
+//				System.out.print("*");
+//			}
+//			System.out.println("");
+//		}
+//		for (int i=5-1;i>=1;i--){
+//			for (int j=1;j<=i;j++){
+//				//System.out.print(j+" ");
+//				System.out.print("*");
+//			}
+//			System.out.println("");
+//		}
 
         //		try {
         //			while(2>1) {
@@ -115,7 +163,7 @@ public class Logics {
 //        			sum=sum+num%10;
 //        			num=num/10;
 //        		}
- //       	System.out.println(sum);
+        //       	System.out.println(sum);
 
 
         //Palindrome number
@@ -208,15 +256,6 @@ public class Logics {
         //
         //		}
 
-        //		ArrayList<String> list=new ArrayList<String>();
-        //		list.add("selenium");
-        //		list.add("java");
-        //		list.add("javarobot");
-        //
-        //		for(String i:list) {
-        //			System.out.println(i);
-        //		}
-
         //
         //		int arr[]=new int[5];
         //		System.out.println(arr.length);
@@ -251,7 +290,7 @@ public class Logics {
 //						String a="google";
 //						String 	p[]=a.split("o");
 //						System.out.println(p.length);
-//						//System.out.println(p[0]);
+//						System.out.println(p[0]);
 //						
 //						for(int i=0;i<p.length;i++) {
 //							System.out.println(p[i]);
@@ -261,37 +300,44 @@ public class Logics {
 
         //reverse a stirng
 
-//				String z="";
+        String z = "";
 //				char e='i';
 //				int c=0;
 //				String str="this is selenium";
 //				//op :muineles si siht
-//				
+//
 //				for(int i=str.length()-1;i>=0;i--) {
 //					//char w=str.charAt(i);
-//					z=z+str.charAt(i);
+//					//z=z+str.charAt(i);
 //					//z=z+w;
+//                    z+=str.charAt(i);
 //				}
 //				System.out.println(z);
-
 
         //no of appereances of char
         //		System.out.println("enter a char");
         //		String a=sc.nextLine();
         //		String b=a.toLowerCase();
-//				String x="id iii";
+        String x = "id ii this is selenium";
 //						char e='i';
 //						int c=0;
-//						
+//
 //						for(int i=0;i<x.length();i++) {
 //							char w=x.charAt(i);
-//							
+//
 //							if(w==e) {
-//								c=c+1;
+//								c++;
 //							}
-//							
+//
 //						}
 //						System.out.println(c);
+//        String e1="is";
+//        long count=x.chars().filter(e->(char)e=='i').count();
+//        System.out.println("char count : "+count);
+
+//		int x=0;
+//		System.out.println(x++);
+//		System.out.println(x);
         //no of word count
         //
         //		System.out.println("enter a word");
@@ -300,11 +346,12 @@ public class Logics {
 //						String w="selenium";
 //						String x="selenium selenium asas  sasa";
 //						String p[]=x.split(" ");
-//						
+//
 //						for(int i=0;i<p.length;i++) {
 //							String act=p[i];
 //							if(act.equalsIgnoreCase(w)) {
-//								c=c+1;
+//								//c=c+1;
+//                                c+=1;
 //							}
 //						}
 //						System.out.println(c);
@@ -350,7 +397,7 @@ public class Logics {
 //					int arr[]= {1,9,6,2,5,8};
 //					int n=arr.length;
 //					//System.out.println(n);
-//
+        //                      // Arrays.sort(arr);
 //					int temp=0;
 //					for(int i=0;i<n;i++){
 //						for(int j=i+1;j<n;j++) {
@@ -393,7 +440,7 @@ public class Logics {
 //				for(;;) {
 //					System.out.println("sel");
 //				}
-		//prime or not
+        //prime or not
 //		boolean flag=false;
 //		int num=4;
 //
@@ -410,9 +457,9 @@ public class Logics {
 //			System.out.println("not prime");
 //		}
 
-		//list of prime numbers
+        //list of prime numbers
 //				int limit=100;
-//				int flag=0;
+//				int flag;
 //				for(int i=2;i<limit;i++) {
 //					flag=0;
 //					for(int j=2;j<i;j++) {
@@ -450,7 +497,7 @@ public class Logics {
 //						System.out.println();
 //					}else {
 //						System.out.print("even num :"+i+" ");
-//						
+//
 //					}
 //				}
         //We all know that JVM divides the allocated memory to a Java program into two parts. one is Stack and another one is heap. Stack is used for execution purpose and heap is used for storage purpose. In that heap memory, JVM allocates some memory specially meant for string literals. This part of the heap memory is called String Constant Pool.
@@ -518,7 +565,7 @@ public class Logics {
 //				System.out.println("the value of b is:"+b);
 //
 //				//append a and b
-//		//System.out.println("test :"+b.substring(0));
+//		System.out.println("test :"+b.substring(1,2));
 //				a=a+b;//helloworld
 //				//store initial string a in string b
 //				b=a.substring(0,a.length()-b.length());
@@ -527,7 +574,7 @@ public class Logics {
 //				System.out.println("after swapping");//
 //				System.out.println("the value of a is:"+a);
 //				System.out.println("the value of b is:"+b);
-				//Remove the duplicates in the string
+        //Remove the duplicates in the string
 //				String names[]= {"java","JavaScript","Ruby","java","Ruby","dd"};
 //				Set<String> store=new HashSet<String>();
 //				for(String name:names) {
@@ -538,7 +585,7 @@ public class Logics {
 //				}
 //				System.out.println(store);
 
-//				int names[]= {1,2,3,4,5,1,2};
+//				Integer names[]= {1,2,3,4,5,1,2};
 //				Set<Integer>store=new HashSet<Integer>();
 //				System.out.println(store);
 //				for(Integer name:names) {
@@ -548,7 +595,11 @@ public class Logics {
 //					}
 //				}
 //				System.out.println(store);
-		//Set
+
+//        Set<Integer>dataSet=new HashSet<Integer>();
+//        Set<Integer>dupSet=Arrays.asList(names).stream().filter(e->!dataSet.add(e)).collect(Collectors.toSet());
+//        System.out.println(dupSet);
+        //Set
 //		List<Integer> numbers=Arrays.asList(1,2,2,4,4,3,5,6,7,8,9,1,0,-1,-1,-2);
 //		List<String> names=new ArrayList<>(Arrays.asList("Java","Ruby","Selenium","Java","Pyton","test","test"));
 //		Set<String> linkedHashSet=new LinkedHashSet<>(names);
@@ -563,12 +614,13 @@ public class Logics {
 //		System.out.println(names.stream().distinct().collect(Collectors.toSet()));
 //		System.out.println(marks);
 //		System.out.println("set:"+marks);
-//				
+//		System.out.print("last :"+names.stream().collect(Collectors.toSet()));
+
 //				
 //			int a=1000,b=000,c=300;
 //				if(a>b && a>c){// a && B it executes both the conditions
-		// a && b if first condition is true then only it executes second condition
-		//a || b if first condition is false then only it executes second condition
+        // a && b if first condition is true then only it executes second condition
+        //a || b if first condition is false then only it executes second condition
 //					System.out.println("a is greater");
 //					}
 //				else if(b>c){
@@ -606,6 +658,15 @@ public class Logics {
 //				}
 //				System.out.println(sum1);
 //				System.out.println("missing number:"+(sum1-sum));
+//        int arr[]={2,3,4,5};
+//        int actualSum=0,expSum=0,total=5;
+//        expSum=total*((total+1)/2);
+//        for (int i:arr){
+//            actualSum+=i;
+//        }
+//        System.out.println(expSum-actualSum);
+
+
         //count no of vowels
 //			String str="this is selenium";
 //			char ch[]=str.toCharArray();
@@ -641,8 +702,7 @@ public class Logics {
 //				System.out.println("");
 //				System.out.println(count);
 //				System.out.println(str2);
-//			for (int i=0;i<str.length();i++){
-//				char w=str.charAt(i);
+//			for (char w:ch){
 //				if(w=='a' ||w=='e'||w=='i'||w=='o'||w=='u') {
 //					System.out.print(w+" ");
 //					count++;
@@ -661,12 +721,12 @@ public class Logics {
 //				System.out.println(s1.hashCode());
 
         //Write a code to check whether one string is a rotation of another?
-//				String str1 = "avajava";  
+//				String str1 = "avajava";
 //		        String str2 = "javaava";
-//		        
+//
 //		        String st3=str1+str2;
 //		        if(st3.contains(str2) && str1.length()==str2.length()) {
-//		        	System.out.println("rotation");        	
+//		        	System.out.println("rotation");
 //		        }
 //		        else {
 //		        	System.out.println("not rotation");
@@ -692,11 +752,12 @@ public class Logics {
 //		            count = 0;
 //		        }
 
-             //HashMap
+        //HashMap
 //				String str="selenium sai sai ";
 //				HashMap<Character ,Integer> charCountMap=new HashMap<Character ,Integer>();
-//				char[]ch=str.toCharArray();
-//				for(char c:ch) {
+//				//char[]ch=str.toCharArray();
+//				for(char c:str.toCharArray()) {
+//				   // if(!String.valueOf(c).isBlank())
 //					if(charCountMap.containsKey(c)) {
 //						charCountMap.put(c, charCountMap.get(c)+1);
 //					}else {
@@ -706,7 +767,8 @@ public class Logics {
 //		        for(Map.Entry entry :charCountMap.entrySet()) {
 //		        	System.out.println(entry.getKey()+"  "+entry.getValue());
 //		        }
-//          //find occurance of duplicates
+//		        System.out.println("test "+charCountMap.entrySet().stream().map(e->e.getKey()+" "+e.getValue()).collect(Collectors.toList()));
+////          //find occurance of duplicates
 //		System.out.println("find occurance of duplicates");
 //         Set<Character> chrs=charCountMap.keySet();
 //				for (char c:chrs){
@@ -714,8 +776,10 @@ public class Logics {
 //				        System.out.println(c+":"+charCountMap.get(c));
 //                    }
 //                }
+//				System.out.println("keySet");
+//				System.out.println(charCountMap.entrySet().stream().filter(e->e.getValue()>1).map(e->e.getKey()+" "+e.getValue()).collect(Collectors.toList()));
 
-		// How do you count the number of occurrences of each word in a string?
+        // How do you count the number of occurrences of each word in a string?
 //		String str="This is Selenium with Java is";
 //		String[] words=str.split(" ");
 //		Map<String,Integer>wordcount=new HashMap<>();
@@ -731,6 +795,7 @@ public class Logics {
 //			System.out.println(en.getKey()+":"+en.getValue());
 //
 //		}
+//		System.out.println("Stream"+wordcount.entrySet().stream().map(e->e.getKey()+":"+e.getValue()).collect(Collectors.toList()));
 //		//       //*****************************************find occurance of duplicates
 //		System.out.println("find occurance of duplicates");
 //		Set<String>wordstring=wordcount.keySet();
@@ -739,12 +804,43 @@ public class Logics {
 //				System.out.println(word+":"+wordcount.get(word));
 //			}
 //		}
+//        System.out.println("Steam and filter"+wordcount.entrySet().stream().filter(e->e.getValue()>1).map(e->e.getKey()+":"
+//               +e.getValue()).collect(Collectors.toList()));
+
+//        Integer []numbers={ 1, 2,3,4,5,1,2};
+//        List<Integer>arr=Arrays.asList(numbers);
+//        Map<Integer,Integer>digimap=new HashMap<Integer,Integer>();
+//        for (Integer number:arr){
+//            if (digimap.containsKey(number)){
+//                digimap.put(number,digimap.get(number)+1);
+//            }else {
+//                digimap.put(number,1);
+//            }
+//        }
+//        System.out.println("direct :"+digimap);
+//
+//        Set<Map.Entry<Integer,Integer>> entrySets=digimap.entrySet();
+//        for (Map.Entry<Integer,Integer> entry:entrySets){
+//          //  System.out.println(entry.getKey()+":"+entry.getValue());
+//            if(entry.getValue()>1){
+//                System.out.println(entry.getKey()+":"+entry.getValue());
+//            }
+//        }
+//        System.out.println(digimap.entrySet().stream().filter(e->e.getValue()>1).map(e->e.getKey()+":"+e.getValue()).collect(Collectors.toList()));
 
 
-		//Java program to print alphabets
+        //Java program to print alphabets
 //		        for(char ch='a';ch<='z';ch++) {
 //		        	System.out.println(ch);
 //		        }
+
+//        for (int i=65;i<=90;i++){
+//            System.out.print((char)(i));
+//        }
+//        System.out.println();
+//        for (int i=97;i<=122;i++){
+//            System.out.print((char)i);
+//        }
 
         //ip address
         // System.out.println(InetAddress.getLocalHost());
@@ -790,7 +886,7 @@ public class Logics {
 //        }
 
 ////        //  output numbers from 1 to 100 without using numbers in your code
-//       int one = 'Z' / 'Z';//1
+        //      int one = 'Z' / 'Z';//1
 //        String s1 = "..........";
 //        for (int i = one; i <= s1.length() * s1.length(); i++) {
 //            System.out.println(i);
@@ -800,6 +896,11 @@ public class Logics {
 //        for (int i=one;i<='d';i++){
 //            System.out.println(i);
 //        }
+//          printNum(1,'d');
+//         printNum(1,100);
+        // IntStream.range(1,101).forEach(e->System.out.println(e));
+
+
         //Compare two int numbers (Integer caching)
 //        //-128 to 127
 //        Integer num1=100;
@@ -813,7 +914,7 @@ public class Logics {
         //Number=Integer,Double,Float
 //        System.out.println(9.0 / 0);//Infinity
 //        System.out.println(22.33f / 0);//Infinity
- //       System.out.println(10 / 0.0);//Infinity
+        //       System.out.println(10 / 0.0);//Infinity
 //        System.out.println(19.999999d / 0);//Infinity
 ////        System.out.println(1/0);//Arithmetic exception
 ////        System.out.println(0/0);//Arithmetic exception
@@ -821,5 +922,173 @@ public class Logics {
 //        System.out.println(0.0 / 0.0);//NaN
 //        System.out.println(12.33 / 0.0);//Infinity
 
+        //Find the sum of natural numbers
+//        int total=0 , count=1 , num=10;
+//        while(num>=count){
+//            total=total+count;
+//            count++;
+//        }
+//        System.out.println(total);
+        //remove white spaces
+//        String str="    this is selenium   ";
+//        System.out.println(str.trim().replaceAll(" ",""));
+//		String val=StringUtils.deleteWhitespace(str);
+//		System.out.println(val);
+//		String DeletedWhiteSpaces="";
+//		for(int i=0;i<str.length();i++){
+//			if(str.charAt(i)!=' ' && str.charAt(i)!='\t'){
+//				DeletedWhiteSpaces=DeletedWhiteSpaces +str.charAt(i);
+//			}
+//		}
+//		System.out.println(DeletedWhiteSpaces);
+//		String str1="this is selenium (java) and tutorial automation";
+//		System.out.println(str1.charAt(2));
+//		System.out.println(str1.indexOf('a',str1.indexOf('j')));
+//		System.out.println(str1.indexOf("is"));
+//		System.out.println(str1.substring(1,3));
+//		System.out.println(str1.substring(str1.indexOf('(')+1,str1.indexOf(')')));
+//		System.out.println(str1.substring(0,str1.indexOf(" ")));
+
+
+//		String filePath="C:\\Users\\marala\\Desktop\\selenium.txt";
+//		int charCount=0;
+//		int wordCount=0;
+//		int lineCount=0;
+//		BufferedReader reader;
+//		try {
+//			reader = new BufferedReader(new FileReader(filePath));
+//			String currentLine = reader.readLine();
+//			while (currentLine != null) {
+//			}
+//
+//			}catch(FileNotFoundException e){
+//				e.printStackTrace();
+//			}catch(Exception e){
+//				e.printStackTrace();
+//			}
+//
+//		int count=0;
+//		while(count<100){
+//			count++;
+//			System.out.println(count);
+//		}
+        //Maximum number of parameters we can take for a method in java?
+        //ans : byte short int boolean float classtype-254(non static) and 255 (static)
+        //double and long --->127(static and non static)
+        //this is java code
+        int value = 10;
+//        // \u000d value=20;
+//        System.out.println(value);
+//        // \u000d System.out.println("this comment line");
+
+//        // how to find length of string in java without using length method
+//        String str = "Testing";
+//        System.out.println(str.toCharArray().length);
+//        System.out.println(str.lastIndexOf(""));
+//        System.out.println(getLength(str));
+
+//        //Get the Count of Words is a Given Capitalized String
+//            String str=" this is Selenium Automation SDET";
+//            int c=0;
+//        if (Character.isLowerCase(str.trim().charAt(0))){
+//            c++;
+//        }
+//            for (int i=0;i<str.length();i++) {
+//                if (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') {
+//                    c++;
+//                }
+//            }
+//            System.out.println(c);
+//        for (int i=0;i<str.length();i++){
+//            if (Character.isUpperCase(str.charAt(i))){
+//                c++;
+//            }
+//        }
+//        System.out.println(c);
+        //streams
+//        long count1=str.chars().filter(e->e>=65&& e<=90).count();
+//       long count2= str.chars().filter(e->Character.isUpperCase(e)).count();
+//       long count3=str.chars().filter(e->e<='A'&&e<='Z').count();
+//       System.out.println(count1);
+//        System.out.println(count2);
+//        System.out.println(count3);
+//        //how to generate Random Numbers in Java using Random, Math and ThreadLocalRandom.
+
+//        Random random = new Random();
+//        for (int i = 0; i < 5; i++) {
+//            System.out.println(random.nextInt());
+//            System.out.println(random.nextBoolean());
+//            System.out.println(random.nextDouble());
+//            System.out.println(random.nextFloat());
+//            System.out.println(random.nextGaussian());
+//        }
+//        System.out.println("______________");
+//        for (int i = 0; i < 5; i++) {
+//            System.out.println(Math.random());
+//        }
+//        System.out.println("______________");
+//        for (int i = 0; i < 5; i++) {
+//            System.out.println(ThreadLocalRandom.current().nextInt());
+//            System.out.println(ThreadLocalRandom.current().nextDouble());
+//            System.out.println(ThreadLocalRandom.current().nextBoolean());
+//            System.out.println(ThreadLocalRandom.current().nextFloat());
+//            System.out.println(ThreadLocalRandom.current().nextLong());
+//        }
+//        System.out.println("_____range_________");
+//        for (int i = 0; i < 5; i++) {
+//            System.out.println(random.nextInt(50));
+//            System.out.println(Math.random() * 100);
+//            System.out.println(ThreadLocalRandom.current().nextInt(0, 15));
+//        }
+//
+//        System.out.println("test :" + Math.pow(10, 5));
+//        System.out.println(randomNumberGenerator(6));
+
+
+//        //Print your name 1000 times without using any loop in Java
+//        String str="selenium";
+//        String s="i";
+//        s=s.replaceAll("i","iiiiiiiiii");
+//        s=s.replaceAll("i","iiiiiiiiii");
+//        s=s.replaceAll("i","iiiiiiiiii");
+//        s=s.replaceAll("i",str+"\n");
+//        System.out.println(s);
+
+
+
     }
+
+    public static void printNum(int stNum, int endNum) {
+        if (stNum <= endNum) {
+            System.out.println(stNum);
+            stNum++;
+            printNum(stNum, endNum);
+        }
+
+    }
+
+    public static int getLength(String str) {
+        int i = 0;
+        try {
+            while (true) {
+                str.charAt(i);
+                i++;
+            }
+
+        } catch (IndexOutOfBoundsException e) {
+            return i;
+        }
+    }
+
+    public static String randomNumberGenerator(int number) {
+        Random rand = new Random();
+        int num = (int) Math.pow(10, number);
+        int randomNumber=0;
+        do {
+            randomNumber = rand.nextInt(num);
+        } while (randomNumber == 0);
+
+        return Integer.toString(randomNumber);
+    }
+
 }
