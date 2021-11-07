@@ -10,6 +10,7 @@ import util.SeleniumBase;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class HandleJQueryDropDown extends SeleniumBase {
   @Test(enabled = false)
@@ -51,18 +52,33 @@ public class HandleJQueryDropDown extends SeleniumBase {
         getDriver("https://www.twoplugs.com/","chrome");
         driver.findElement(By.xpath("//*[text()='Live Posting']")).click();
             Select s=new Select(driver.findElement(By.name("category_id")));
+//            s.selectByIndex(1);
+//           // s.deselectByIndex(1);
+//            s.selectByVisibleText("Automobile");
+//          //  s.deselectByVisibleText("Automobile");
+//            s.selectByValue("7");
+//            s.selectByValue("7");
+
             List<WebElement> options=s.getOptions();
-            List origionalList=new ArrayList();
-            List<String> tempList=new ArrayList();
-            for (WebElement option:options){
-                origionalList.add(option.getText());
-                tempList.add(option.getText());
-            }
-            System.out.println("original :"+origionalList);
-            System.out.println("temp :"+tempList);
-            Collections.sort(tempList);
-            System.out.println(" after sorted temp :"+tempList);
-            if(origionalList.equals(tempList)){
+            List<String>origional=options.stream().map(e->e.getText()).collect(Collectors.toList());
+            List<String>temp=origional.stream().sorted().collect(Collectors.toList());
+//            List origionalList=new ArrayList();
+//            List<String> tempList=new ArrayList();
+//            for (WebElement option:options){
+//                origionalList.add(option.getText());
+//                tempList.add(option.getText());
+//            }
+//            System.out.println("original :"+origionalList);
+//            System.out.println("temp :"+tempList);
+//            Collections.sort(tempList);
+//            System.out.println(" after sorted temp :"+tempList);
+//            if(origionalList.equals(tempList)){
+//                System.out.println("DropDown sorted");
+//            }else {
+//                System.out.println("DropDown unsorted");
+//            }
+
+            if(origional.equals(temp)){
                 System.out.println("DropDown sorted");
             }else {
                 System.out.println("DropDown unsorted");
