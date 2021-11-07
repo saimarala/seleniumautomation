@@ -597,8 +597,11 @@ public class Logics {
 //				System.out.println(store);
 
 //        Set<Integer>dataSet=new HashSet<Integer>();
+//        Set<Integer>dataSet1=new HashSet<Integer>();
 //        Set<Integer>dupSet=Arrays.asList(names).stream().filter(e->!dataSet.add(e)).collect(Collectors.toSet());
+//        Set<Integer>RemovedupSet=Arrays.stream(names).filter(e->dataSet1.add(e)).collect(Collectors.toSet());
 //        System.out.println(dupSet);
+//        System.out.println(RemovedupSet);
         //Set
 //		List<Integer> numbers=Arrays.asList(1,2,2,4,4,3,5,6,7,8,9,1,0,-1,-1,-2);
 //		List<String> names=new ArrayList<>(Arrays.asList("Java","Ruby","Selenium","Java","Pyton","test","test"));
@@ -817,8 +820,8 @@ public class Logics {
 //                digimap.put(number,1);
 //            }
 //        }
-//        System.out.println("direct :"+digimap);
-//
+//        //System.out.println("direct :"+digimap);
+////
 //        Set<Map.Entry<Integer,Integer>> entrySets=digimap.entrySet();
 //        for (Map.Entry<Integer,Integer> entry:entrySets){
 //          //  System.out.println(entry.getKey()+":"+entry.getValue());
@@ -827,7 +830,34 @@ public class Logics {
 //            }
 //        }
 //        System.out.println(digimap.entrySet().stream().filter(e->e.getValue()>1).map(e->e.getKey()+":"+e.getValue()).collect(Collectors.toList()));
-
+//        String names[] = {"Java", "Selenium", "Java", "Sel", "Sel"};
+//        String val="";
+//        HashMap<String, Integer> hm = new HashMap<>();
+//        for (String e : names) {
+//            Integer count = hm.get(e);
+//            if (count == null) {
+//                hm.put(e, 1);
+//            } else {
+//                hm.put(e, ++count);
+//            }
+//        }
+//        List<String>ls=Arrays.asList(names);
+//        for(String name:ls){
+//            if(hm.containsKey(name)){
+//                hm.put(name,hm.get(name)+1);
+//            }else {
+//                hm.put(name,1);
+//            }
+//        }
+//        System.out.println(hm);
+//        Set<Map.Entry<String, Integer>> entrySet = hm.entrySet();
+//        for (Map.Entry<String, Integer> entry : entrySet) {
+//            if (entry.getValue() > 1) {
+//                System.out.println( entry.getKey()+":"+entry.getValue());
+//                //  val=val+" "+entry.getKey();
+//            }
+//        }
+        //  System.out.println("Duplicate element:" + val);
 
         //Java program to print alphabets
 //		        for(char ch='a';ch<='z';ch++) {
