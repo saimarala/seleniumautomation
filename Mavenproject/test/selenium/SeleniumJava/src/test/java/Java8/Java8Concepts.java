@@ -56,8 +56,14 @@ public class Java8Concepts extends SeleniumBase {
         //    newStream.sorted().forEach(s -> System.out.println(s));
         System.out.println("*****concat end**********");
         System.out.println("*****boolean start**********");
-        boolean flag = newStream.anyMatch(s -> s.equalsIgnoreCase("hp"));
-        Assert.assertTrue(flag);
+       // boolean flag = newStream.anyMatch(s -> s.equalsIgnoreCase("hp"));
+      //  Assert.assertTrue(flag);
+        System.out.println("all match");
+//        boolean flag1=newStream.allMatch(s->s.startsWith("A") ||s.startsWith("J")|| s.startsWith("S") || s.startsWith("H")|| s.startsWith("c")|| s.startsWith("h"));
+//        Assert.assertTrue(flag1);
+        System.out.println("none of match");
+        boolean flag2=newStream.noneMatch(s->s.endsWith("k"));
+        System.out.println(flag2);
         System.out.println("*****boolean end**********");
 
     }
@@ -86,13 +92,13 @@ public class Java8Concepts extends SeleniumBase {
     @Test
     public void testcol() throws Throwable {
         getDriver("http://register.rediff.com/commonreg/index.php?redr=http://portfolio.rediff.com/money/jsp/loginnew.jsp?redr=home", "chrome");
+        Thread.sleep(2000);
         // List<WebElement> originalList=driver.findElements(By.xpath("//select[@id='city']"));
         List<WebElement> originalList = driver.findElements(By.xpath("//select[@id='country']"));
         List<String> origionalTextList = originalList.stream().map(s -> s.getText()).collect(Collectors.toList());
         List<String> sortedList = origionalTextList.stream().sorted().collect(Collectors.toList());
         Assert.assertTrue(origionalTextList.equals(sortedList));
-
-
+        driver.quit();
     }
 
 }
