@@ -11,7 +11,9 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class HandleLinks {
 
@@ -35,8 +37,8 @@ public class HandleLinks {
 
     }
 
-    @Test
-    void hnadleBrokenLinks(){
+    @Test(enabled = false)
+    void handleBrokenLinks(){
         WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
         driver.get("http://www.deadlinkcity.com/");
@@ -65,5 +67,48 @@ public class HandleLinks {
 
 
 
+    }
+
+    @Test
+    void validateBrokenLinks(){
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver=new ChromeDriver();
+        driver.get("http://www.deadlinkcity.com/");
+
+       // List<WebElement>links=driver.findElements(By.tagName("a"));
+        List<String>arrList=new ArrayList<String>();
+//        for (WebElement e:links){
+//            String link= e.getAttribute("href");
+//            //brokenLinksCheck(link);
+//            arrList.add(link);
+//        }
+       // driver.findElements(By.tagName("a")).stream().forEach(e->arrList.add(e.getAttribute("href")));
+        List<String> ls=driver.findElements(By.tagName("a")).stream().map(e->e.getAttribute("href")).collect(Collectors.toList());
+        long stTime=System.currentTimeMillis();
+       // arrList.parallelStream().forEach(e->brokenLinksCheck(e));
+       // arrList.stream().forEach(e->brokenLinksCheck(e));
+        //ls.stream().forEach(e->brokenLinksCheck(e));
+      //  ls.parallelStream().forEach(e->brokenLinksCheck(e));
+        ls.stream().parallel().forEach(e->brokenLinksCheck(e));
+        long endTime=System.currentTimeMillis();
+        System.out.println("total time taken:"+(endTime-stTime));
+        driver.quit();
+    }
+
+    void brokenLinksCheck(String url)  {
+        try{
+            URL links=new URL(url);
+            HttpURLConnection httpConnect=(HttpURLConnection)links.openConnection();
+            httpConnect.setConnectTimeout(4000);
+            httpConnect.connect();
+            if(httpConnect.getResponseCode()>=400){
+                System.out.println(httpConnect.getResponseCode()+" is "+"Broken link");
+            }else {
+                System.out.println(httpConnect.getResponseCode()+" is "+"Valid link");
+            }
+
+        }catch (Exception e){
+
+        }
     }
 }
