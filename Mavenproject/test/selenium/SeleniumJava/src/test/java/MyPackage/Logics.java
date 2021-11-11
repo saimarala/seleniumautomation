@@ -175,6 +175,8 @@ public class Logics {
 //							sum=(sum*10)+num%10;
 //							num=num/10;
 //						}
+//						//reverse a number
+//						System.out.println(sum);
 //						if(temp==sum) {
 //							System.out.println("Palindrome number"+sum);
 //						}
@@ -200,6 +202,28 @@ public class Logics {
 //						else {
 //							System.out.println("not Armstrong number");
 //						}
+
+        //Anagram Or Not
+//        String s1="Silent";
+//        String s2="Listen";
+//        boolean status= true;
+//        s1=s1.replaceAll("\\s","");
+//        s2.replaceAll("\\s","");
+//        if(s1.length()!=s2.length()){
+//            status=false;
+//        }else {
+//            char c1[]=s1.toLowerCase().toCharArray();
+//            char c2[]=s2.toLowerCase().toCharArray();
+//            Arrays.sort(c1);
+//            Arrays.sort(c2);
+//            Arrays.equals(c1,c2);
+//        }
+//        if(status){
+//            System.out.println("Anagram");
+//        }else {
+//            System.out.println("not anagram");
+//        }
+
 
         //even or odd
 
@@ -300,12 +324,11 @@ public class Logics {
 
         //reverse a stirng
 
-        String z = "";
+//        String z = "";
 //				char e='i';
 //				int c=0;
 //				String str="this is selenium";
 //				//op :muineles si siht
-//
 //				for(int i=str.length()-1;i>=0;i--) {
 //					//char w=str.charAt(i);
 //					//z=z+str.charAt(i);
@@ -318,7 +341,7 @@ public class Logics {
         //		System.out.println("enter a char");
         //		String a=sc.nextLine();
         //		String b=a.toLowerCase();
-        String x = "id ii this is selenium";
+ //       String x = "id ii this is selenium";
 //						char e='i';
 //						int c=0;
 //
@@ -760,7 +783,9 @@ public class Logics {
 //				HashMap<Character ,Integer> charCountMap=new HashMap<Character ,Integer>();
 //				//char[]ch=str.toCharArray();
 //				for(char c:str.toCharArray()) {
-//				   // if(!String.valueOf(c).isBlank())
+//				   // if(!String.valueOf(c).isBlank())// returns true if the string is empty or contains only white space//
+//                  // The java string isEmpty() method checks if this string is empty.
+//                 // It returns true, if the length of the string is 0 otherwise false
 //					if(charCountMap.containsKey(c)) {
 //						charCountMap.put(c, charCountMap.get(c)+1);
 //					}else {
@@ -783,17 +808,17 @@ public class Logics {
 //				System.out.println(charCountMap.entrySet().stream().filter(e->e.getValue()>1).map(e->e.getKey()+" "+e.getValue()).collect(Collectors.toList()));
 
         // How do you count the number of occurrences of each word in a string?
-//		String str="This is Selenium with Java is";
-//		String[] words=str.split(" ");
+//		String str="This Is Selenium with Java is";
+//		String[] words=str.toLowerCase().split(" ");
 //		Map<String,Integer>wordcount=new HashMap<>();
 //		for (String word :words){
 //			if(wordcount.containsKey(word)){
-//				wordcount.put(word.toLowerCase(),wordcount.get(word)+1);
+//				wordcount.put(word,wordcount.get(word)+1);
 //			}else{
-//				wordcount.put(word.toLowerCase(),1);
+//				wordcount.put(word,1);
 //			}
 //		}
-////          // How do you count the number of occurrences of each character in a string?
+//////          // How do you count the number of occurrences of each character in a string?
 //		for(Map.Entry en:wordcount.entrySet()){
 //			System.out.println(en.getKey()+":"+en.getValue());
 //
@@ -926,6 +951,12 @@ public class Logics {
 //        for (int i=one;i<='d';i++){
 //            System.out.println(i);
 //        }
+
+        //		int count=0;
+//		while(count<100){
+//			count++;
+//			System.out.println(count);
+//		}
 //          printNum(1,'d');
 //         printNum(1,100);
         // IntStream.range(1,101).forEach(e->System.out.println(e));
@@ -984,24 +1015,37 @@ public class Logics {
 //		int charCount=0;
 //		int wordCount=0;
 //		int lineCount=0;
-//		BufferedReader reader;
+//		BufferedReader reader=null;
+//		Map<String,Integer>wordMap=new HashMap<>();
 //		try {
 //			reader = new BufferedReader(new FileReader(filePath));
 //			String currentLine = reader.readLine();
 //			while (currentLine != null) {
+//			    String words[]=currentLine.toLowerCase().split(" ");
+//			    for (String word :words){
+//			        if(wordMap.containsKey(word)){
+//			            wordMap.put(word,wordMap.get(word)+1);
+//                    }else {
+//			            wordMap.put(word,1);
+//                    }
+//                }
+//			    currentLine=reader.readLine();
 //			}
+//
 //
 //			}catch(FileNotFoundException e){
 //				e.printStackTrace();
 //			}catch(Exception e){
 //				e.printStackTrace();
-//			}
+//			}finally {
+//		    try{
+//                reader.close();
+//            }catch (Exception e){
 //
-//		int count=0;
-//		while(count<100){
-//			count++;
-//			System.out.println(count);
-//		}
+//            }
+//        }
+//        wordMap.entrySet().stream().map(e->e.getKey()+" "+e.getValue()).forEach(System.out::println);
+
         //Maximum number of parameters we can take for a method in java?
         //ans : byte short int boolean float classtype-254(non static) and 255 (static)
         //double and long --->127(static and non static)
@@ -1084,6 +1128,9 @@ public class Logics {
 //        s=s.replaceAll("i",str+"\n");
 //        System.out.println(s);
 
+//        String str="this is selenium";
+//        System.out.println(str.replace('i','z'));//the replace() method replaces all the occurrences of old char with new char
+//        System.out.println(str.replaceAll("(.*)is(.*)","was"));// replaceAll() method replaces all the occurrences of old string with the new string.
 
 
     }
@@ -1119,6 +1166,20 @@ public class Logics {
         } while (randomNumber == 0);
 
         return Integer.toString(randomNumber);
+    }
+
+    public boolean isAnagram(String str1,String str2){
+        str1=str1.replaceAll("\\s","");
+        str2=str2.replaceAll("\\s","");
+        if(str1.length()!=str2.length()){
+            return false;
+        }else {
+            char c1[]= str1.toLowerCase().toCharArray();
+            char c2[]=str2.toLowerCase().toCharArray();
+            Arrays.sort(c1);
+            Arrays.sort(c2);
+            return Arrays.equals(c1,c2);
+            }
     }
 
 }
