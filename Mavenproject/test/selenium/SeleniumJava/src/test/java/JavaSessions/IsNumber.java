@@ -6,7 +6,8 @@ public class IsNumber {
 
     @Test
     void isNumber(){
-        isValidPhoneNumber("1234567891");
+       // isValidPhoneNumber("1234567891");
+        System.out.println(isCorrectPhoneNumber("123456789a"));
     }
 
     static boolean isNumber(String number){
@@ -27,5 +28,9 @@ public class IsNumber {
         }else
             System.out.println(" not valid ph number"+number);
             return false;
+    }
+    static boolean isCorrectPhoneNumber(String number){
+       // return number.matches("[0-9]{10}");
+        return number.matches("\\d{10}");
     }
 }
