@@ -2,11 +2,8 @@ package collections;
 
 import org.testng.annotations.Test;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Set;
 
 public class HashMapConcept {
     @Test
@@ -59,9 +56,7 @@ public class HashMapConcept {
 //            int key = m1.getKey();
 //            Employee emp = m1.getValue();
 //            System.out.println("Employee " + key + " info");
-//
 //            System.out.println(emp.name + " " + emp.age + " " + emp.dept);
-//
 //        }
         System.out.println("***entrySet***");
         Set s = hm.entrySet();
@@ -70,15 +65,33 @@ public class HashMapConcept {
         if (hm.containsValue("java"))
             System.out.println("value is found");
         System.out.println(hm);//{1=java, 2=selenium, 3=autoamtion}
-
         System.out.println("***keySet***");
-
         Set s1 = hm.keySet();
         System.out.println(s1);//[1, 2, 3]
         for (Object ks : hm.keySet()) {
             System.out.println(ks);
 
         }
+
+        //iterator
+        System.out.println("iterator by using key set");
+        Iterator<Integer>itr=hm.keySet().iterator();
+        while (itr.hasNext()){
+            Integer key=itr.next();{
+                String value=hm.get(key);
+                System.out.println(key+":"+value);
+            }
+        }
+        System.out.println("iterator by using   entrySet");
+//        Iterator<Map.Entry<Integer,String>>it1=hm.entrySet().iterator();
+//        while (itr.hasNext()){
+//            Map.Entry<Integer,Integer>entry=itr.next();
+//        }
+
+        System.out.println("*****java8*****");
+        hm.forEach(((k,v)->System.out.println(k+":"+v)));
+        System.out.println("******streams*****");
+        hm.entrySet().stream().forEach(System.out::println);
     }
 
 }
