@@ -15,7 +15,6 @@ public class Logics {
     public static void main(String[] args) {
         //swap two numbers
 				/*int x=10,y=20;
-
 				x=x+y;
 				y=x-y;
 				x=x-y;
@@ -54,14 +53,10 @@ public class Logics {
 //				}
 
 				/*	int l=5;
-
 				for(int i=1;i<=l;i++) {
-
 					for(int k=l-1;k>=i;k--) {
 						System.out.print(" ");
 					}
-
-
 					for(int j=1;j<=i;j++) {
 						System.out.print("*");
 					}
@@ -148,7 +143,7 @@ public class Logics {
 //								Scanner sc=new Scanner(System.in);
 //								int num=sc.nextInt();
 //							int num=5;
-//								
+//
 //								for(int i=1;i<10;i++) {//
 //									System.out.println(num+"*"+i+"="+(num*i));
 //								}
@@ -268,54 +263,12 @@ public class Logics {
         //			}
         //		}
 
-
-        //for each
-
-        //		int arr[]= {2,3,4,5,6,7};
-        //		int a[]=new  int[] {3,4,7,9};
-        //
-        //		for(int i:arr) {
-        //
-        //			System.out.println(i);
-        //
-        //		}
-
-        //
-        //		int arr[]=new int[5];
-        //		System.out.println(arr.length);
-        //		Scanner sc=new Scanner(System.in);
-        //		System.out.println("enter 5 number");{
-        //			for(int i=0;i<=arr.length-1;i++) {
-        //				arr[i]=sc.nextInt();
-        //			}
-        //			int tot=0;
-        //			for(int j=0;j<=arr.length-1;j++) {
-        //				tot=tot+arr[j];
-        //			}
-        //			System.out.println(tot);
-        //		}
-        //		ArrayList<Integer> x=new ArrayList();
-        //
-        //		Scanner sc=new Scanner(System.in);
-        //		System.out.println("enter array size");
-        //		int s=sc.nextInt();
-        //		System.out.println("enter data");
-        //
-        //		for(int i=0;i<s;i++) {
-        //			x.add(sc.nextInt());
-        //		}
-        //
-        //		int tot=0;
-        //		for(int i=0;i<s;i++) {
-        //			tot=tot+x.get(i);
-        //		}
-        ////
         ////		System.out.println(tot);
 //						String a="google";
 //						String 	p[]=a.split("o");
 //						System.out.println(p.length);
 //						System.out.println(p[0]);
-//						
+//
 //						for(int i=0;i<p.length;i++) {
 //							System.out.println(p[i]);
 //						}
@@ -341,7 +294,7 @@ public class Logics {
         //		System.out.println("enter a char");
         //		String a=sc.nextLine();
         //		String b=a.toLowerCase();
- //       String x = "id ii this is selenium";
+        //       String x = "id ii this is selenium";
 //						char e='i';
 //						int c=0;
 //
@@ -378,7 +331,7 @@ public class Logics {
 //							}
 //						}
 //						System.out.println(c);
-//				
+//
         //// length can be used for int[], double[], String[]
         // to know the length of the arrays.
 
@@ -390,37 +343,31 @@ public class Logics {
 //						String str="this is selenium";
 //						//op: siht si muineles
 //						String words[]=str.split(" ");
-        //
-//						
 //						for(int i=0;i<words.length;i++) {
 //								String word=words[i];
 //								String reverseWord="";
-//								
 //							for(int j=word.length()-1;j>=0;j--) {
 //								reverseWord=reverseWord+word.charAt(j);
-//									
+//
 //								}
 //							reversedString = reversedString+reverseWord+" ";
 //						}
-//						
-//					System.out.println(reversedString);
-
-
+//					System.out.println(reversedString.trim());
         //
-//				//selenium is this 
+//				//selenium is this
 //				String str="this is selenium";
 //				String words[]=str.split(" ");
 //				String reverse="";
 //				for(int i=words.length-1;i>=0;i--) {
 //					reverse=reverse+words[i]+" ";
 //				}
-//				
+//
 //				System.out.println(reverse);
 //				//ascendening order
 //					int arr[]= {1,9,6,2,5,8};
 //					int n=arr.length;
 //					//System.out.println(n);
-        //                      // Arrays.sort(arr);
+//                              // Arrays.sort(arr);
 //					int temp=0;
 //					for(int i=0;i<n;i++){
 //						for(int j=i+1;j<n;j++) {
@@ -431,9 +378,12 @@ public class Logics {
 //							}
 //						}
 //					}
-//				    for (int i = 0; i < arr.length; i++) {
-//				        System.out.print(arr[i] + " ");
-//				    }
+////				    for (int i = 0; i < arr.length; i++) {
+////				        System.out.print(arr[i] + " ");
+////				    }
+//				    for (int a:arr){
+//				        System.out.print(a+" ");
+//                    }
 //					System.out.println();
 //            System.out.println(n);
         //split alphanumeric
@@ -465,7 +415,7 @@ public class Logics {
 //				}
         //prime or not
 //		boolean flag=false;
-//		int num=4;
+//		int num=5;
 //
 //		for(int i=2;i<num;i++) {
 //			if(num%i==0)
@@ -497,14 +447,14 @@ public class Logics {
 //				}
         //largest number & smallest number
 
-//				int a[]={2,4,5,10,8,7,2};
-//				
+//				int a[]={2,4,5,10,8,7,2,100,0,-1};
+//
 //				int smallest=a[0];
 //				int largest=a[0];
 //				for(int i=1;i<a.length;i++) {
 //					if(a[i]>largest) {
 //						largest=a[i];
-//					}else if(a[i]<smallest) {
+//					}else if (a[i]<smallest) {
 //						smallest=a[i];
 //					}
 //			}
@@ -561,7 +511,7 @@ public class Logics {
 //					System.out.println("five");
 //					default:
 //						System.out.println("not matchinh");
-        //	}
+//        	}
         //concatenation
 //				int a=100;
 //				int b=200;
@@ -569,7 +519,7 @@ public class Logics {
 //				String y="world";
 //				double c=12.33;
 //				double d=10.33;
-//				
+//
 //				System.out.println(a+b);
 //				System.out.println(x+y);
 //				System.out.println(a+b+x+y);
@@ -603,7 +553,7 @@ public class Logics {
 //				for(String name:names) {
 //					if(store.add(name)==false) {
 //						System.out.println("duplicate element is :"+name);
-//						store.remove(name);
+//						//store.remove(name);
 //					}
 //				}
 //				System.out.println(store);
@@ -624,9 +574,9 @@ public class Logics {
 //        Set<Integer>dupSet=Arrays.asList(names).stream().filter(e->!dataSet.add(e)).collect(Collectors.toSet());
 //        Set<Integer>RemovedupSet=Arrays.stream(names).filter(e->dataSet1.add(e)).collect(Collectors.toSet());
 //        System.out.println(dupSet);
-//        System.out.println(RemovedupSet);
+ //       System.out.println(RemovedupSet);
         //Set
-//		List<Integer> numbers=Arrays.asList(1,2,2,4,4,3,5,6,7,8,9,1,0,-1,-1,-2);
+		//List<Integer> numbers=Arrays.asList(1,2,2,4,4,3,5,6,7,8,9,1,0,-1,-1,-2);
 //		List<String> names=new ArrayList<>(Arrays.asList("Java","Ruby","Selenium","Java","Pyton","test","test"));
 //		Set<String> linkedHashSet=new LinkedHashSet<>(names);
 //		System.out.println(linkedHashSet);
@@ -634,7 +584,7 @@ public class Logics {
 //		System.out.println(hashSet);
 //		List<Integer>  numbersListWithoutDuplicate=new ArrayList<>(hashSet);
 //		System.out.println(numbersListWithoutDuplicate);
-//		//JDk 8 -Stream :
+		//JDk 8 -Stream :
 //		Set<String> marks=names.stream().distinct().collect(Collectors.toSet());
 //		Set<String> set=names.stream().collect(Collectors.toSet());
 //		System.out.println(names.stream().distinct().collect(Collectors.toSet()));
@@ -642,7 +592,7 @@ public class Logics {
 //		System.out.println("set:"+marks);
 //		System.out.print("last :"+names.stream().collect(Collectors.toSet()));
 
-//				
+//
 //			int a=1000,b=000,c=300;
 //				if(a>b && a>c){// a && B it executes both the conditions
         // a && b if first condition is true then only it executes second condition
@@ -665,7 +615,7 @@ public class Logics {
 //				String[] str = { "GEEKS", "FOR", "GEEKS" };
 //		        System.out.println(str[0].length());
 
-//		        
+//
 //		        String str="he selenium";
 //		        StringBuffer s=new StringBuffer(str);
 //		        System.out.println(s.reverse());
@@ -757,10 +707,10 @@ public class Logics {
 //		        else {
 //		        	System.out.println("not rotation");
 //		        }
-//				
+//
 
 //		        How do you count the number of occurrences of each character in a string?
-//		        
+//
 //		        String s="mmababctamantlslmag";
 //		        int count = 0 ;
 //		        for (int i = 0; i < s.length(); i++) {
@@ -903,10 +853,10 @@ public class Logics {
 //		        String str="the order 1233456 has been placed";
 //		        String p[]=str.split(" ");
 //		        System.out.println(p[2]);
-//		        
+//
         //only one word reverse
 //		        String str1="This is selenium java selenium";
-//		        
+//
 //		        String[]p=str1.split(" ");
 //		        String z="";
 //		        for(int i=0;i<p.length;i++) {
@@ -914,12 +864,12 @@ public class Logics {
 //		        	if(exp.equals("selenium")) {
 //		        		for(int j=exp.length()-1;j>=0;j--) {
 //		        			z=z+exp.charAt(j);
-//		        			
+//
 //		        		}
 //		        	}
-//		        	
+//
 //		        }
-//		        
+//
 //		System.out.println(z);
 //		str1=str1.replace("selenium",z);
 //		System.out.println(str1);
@@ -1062,7 +1012,7 @@ public class Logics {
 //        System.out.println(getLength(str));
 
 //        //Get the Count of Words is a Given Capitalized String
-//            String str=" this is Selenium Automation SDET";
+ //           String str=" this is Selenium Automation SDET";
 //            int c=0;
 //        if (Character.isLowerCase(str.trim().charAt(0))){
 //            c++;
@@ -1082,7 +1032,7 @@ public class Logics {
         //streams
 //        long count1=str.chars().filter(e->e>=65&& e<=90).count();
 //       long count2= str.chars().filter(e->Character.isUpperCase(e)).count();
-//       long count3=str.chars().filter(e->e<='A'&&e<='Z').count();
+//       long count3=str.chars().filter(e->e>='A'&&e<='Z').count();
 //       System.out.println(count1);
 //        System.out.println(count2);
 //        System.out.println(count3);
@@ -1129,8 +1079,10 @@ public class Logics {
 //        System.out.println(s);
 
 //        String str="this is selenium";
-//        System.out.println(str.replace('i','z'));//the replace() method replaces all the occurrences of old char with new char
-//        System.out.println(str.replaceAll("(.*)is(.*)","was"));// replaceAll() method replaces all the occurrences of old string with the new string.
+//        System.out.println(str.replace('i','z'));//the replace() method
+//        replaces all the occurrences of old char with new char
+//        System.out.println(str.replaceAll("(.*)is(.*)","was"));// replaceAll() method
+//        replaces all the occurrences of old string with the new string.
 
 
     }
@@ -1160,7 +1112,7 @@ public class Logics {
     public static String randomNumberGenerator(int number) {
         Random rand = new Random();
         int num = (int) Math.pow(10, number);
-        int randomNumber=0;
+        int randomNumber = 0;
         do {
             randomNumber = rand.nextInt(num);
         } while (randomNumber == 0);
@@ -1168,18 +1120,18 @@ public class Logics {
         return Integer.toString(randomNumber);
     }
 
-    public boolean isAnagram(String str1,String str2){
-        str1=str1.replaceAll("\\s","");
-        str2=str2.replaceAll("\\s","");
-        if(str1.length()!=str2.length()){
+    public boolean isAnagram(String str1, String str2) {
+        str1 = str1.replaceAll("\\s", "");
+        str2 = str2.replaceAll("\\s", "");
+        if (str1.length() != str2.length()) {
             return false;
-        }else {
-            char c1[]= str1.toLowerCase().toCharArray();
-            char c2[]=str2.toLowerCase().toCharArray();
+        } else {
+            char c1[] = str1.toLowerCase().toCharArray();
+            char c2[] = str2.toLowerCase().toCharArray();
             Arrays.sort(c1);
             Arrays.sort(c2);
-            return Arrays.equals(c1,c2);
-            }
+            return Arrays.equals(c1, c2);
+        }
     }
 
 }
