@@ -7,6 +7,7 @@ public class Wrapper {
         //string to integer
         System.out.println("String to integer");
         int j = Integer.parseInt(i);
+        int z=Integer.valueOf(i);
         System.out.println(j + 20);
         System.out.println(i + 20);
 
@@ -31,9 +32,20 @@ public class Wrapper {
         boolean b = Boolean.parseBoolean(t);
         System.out.println(b);
 
+        //long
+        String f="123456788";
+        long lon=Long.parseLong(f);
+
+        int u=12;
+        Integer c=u;
+        System.out.println(c);
+        Integer h=new Integer(u);//premitive type to Integer object
+        System.out.println(h);
+
         String s = "100A";
         int a = Integer.parseInt(s);//number format exception
         System.out.println(a);
+
 
 
     }
