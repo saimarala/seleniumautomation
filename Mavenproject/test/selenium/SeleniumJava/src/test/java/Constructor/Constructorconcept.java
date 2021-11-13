@@ -6,6 +6,8 @@ public class Constructorconcept {
     String name;
 
     public Constructorconcept() {
+        //this(10);//constructor chaining and it should be first line 
+        this(10,20);
         System.out.println("default constructor");
     }
 
@@ -18,7 +20,7 @@ public class Constructorconcept {
         System.out.println("2 param");
         System.out.println(i + " " + j);
     }
-
+        //this keyword used when we initilaze the class variable to local varaible
     public Constructorconcept(int age, String name) {
         this.age = age;//this.classvar=localvar
         this.name = name;
