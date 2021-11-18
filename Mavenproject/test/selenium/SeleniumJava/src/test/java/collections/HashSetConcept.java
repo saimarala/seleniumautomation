@@ -40,6 +40,7 @@ public class HashSetConcept {
 //        while (it.hasNext())System.out.println(it.next());
         // hs.forEach(System.out::println);
         hs.stream().forEach(System.out::println);
+        hs.forEach(System.out::println);
 
         HashSet<Integer> evenNum = new HashSet<Integer>();
         evenNum.add(2);

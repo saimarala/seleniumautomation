@@ -1,13 +1,28 @@
 package collections;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 
 public class ArrayListConcept {
 
     public static  void main(String[] args) {
 
         int a[] = new int[3];
+        a[0]=1;
+        a[1]=2;
+        a[2]=3;
+       // a[3]=4;//ArrayIndexOutOfBoundsException
+
+        Arrays.stream(a).forEach(System.out::println);
+        for (int i=0;i<a.length;i++){
+            System.out.println(a[i]);
+        }
+        for (int b:a){
+            System.out.println(b);
+        }
+
 
         //default value is 10
         //insertion order is  preserved
@@ -23,6 +38,8 @@ public class ArrayListConcept {
 
         System.out.println(ar);
         System.out.println("size :" + ar.size());
+        System.out.println("using Stream");
+        ar.stream().forEach(System.out::println);
 
         for (int i = 0; i < ar.size(); i++) {
             System.out.println(ar.get(i));
@@ -38,7 +55,7 @@ public class ArrayListConcept {
         ar.removeAll(ar);
         System.out.println("removeall :" + ar);
         System.out.println("integers");
-        ArrayList<Integer> ar1 = new ArrayList<Integer>();
+        List<Integer> ar1 = new ArrayList<Integer>();
         ar1.add(1);
         ar1.add(2);
 
