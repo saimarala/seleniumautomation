@@ -84,6 +84,8 @@ public class HandleLinks {
 //        }
        // driver.findElements(By.tagName("a")).stream().forEach(e->arrList.add(e.getAttribute("href")));
         List<String> ls=driver.findElements(By.tagName("a")).stream().map(e->e.getAttribute("href")).collect(Collectors.toList());
+//        List<String> imgls=driver.findElements(By.tagName("img")).stream().map(e->e.getAttribute("src")).collect(Collectors.toList());
+//        ls.addAll(imgls);
         long stTime=System.currentTimeMillis();
        // arrList.parallelStream().forEach(e->brokenLinksCheck(e));
        // arrList.stream().forEach(e->brokenLinksCheck(e));
@@ -102,6 +104,7 @@ public class HandleLinks {
             httpConnect.setConnectTimeout(4000);
             httpConnect.connect();
             if(httpConnect.getResponseCode()>=400){
+                //for image httpConnect.getResponseCode==404|| httpConnect.getResponseCode==500
                 System.out.println(httpConnect.getResponseCode()+" is "+"Broken link");
             }else {
                 System.out.println(httpConnect.getResponseCode()+" is "+"Valid link");
