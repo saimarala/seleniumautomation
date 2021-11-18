@@ -9,6 +9,7 @@ import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.zip.ZipEntry;
 
 public class Logics {
 
@@ -640,9 +641,19 @@ public class Logics {
 //        for (int i:arr){
 //            actualSum+=i;
 //        }
-//        System.out.println(expSum-actualSum);
-
-
+//       System.out.println(expSum-actualSum);
+        //write a java program to merge two sorted arrays
+//        Integer a[]={1,3,5,7,9} ,b[]={2,4,6,8};
+//        Map<Integer,Boolean>mp=new HashMap<>();
+//        for (int i=0;i<a.length;i++){
+//            mp.put(a[i],true);
+//        }
+//        for (int i=0;i<b.length;i++){
+//            mp.put(b[i],true);
+//        }
+//         // mp.entrySet().forEach(System.out::println);
+//        //System.out.println(mp);
+//        System.out.println(mp.entrySet().stream().map(e->e.getKey()).collect(Collectors.toList()));
         //count no of vowels
 //			String str="this is selenium";
 //			char ch[]=str.toCharArray();
@@ -678,17 +689,20 @@ public class Logics {
 //				System.out.println("");
 //				System.out.println(count);
 //				System.out.println(str2);
+//       long vowelsCount=str.chars().filter(w->(char)w=='a' ||w=='e'||w=='i'||w=='o'||w=='u').count();
+//       System.out.println("vowels count:"+vowelsCount);
 //			for (char w:ch){
-//				if(w=='a' ||w=='e'||w=='i'||w=='o'||w=='u') {
+//				//if(w=='a' ||w=='e'||w=='i'||w=='o'||w=='u') {
+//                if(vowelCheck(w)) {
 //					System.out.print(w+" ");
 //					count++;
 //				}	else {
 //					str2 = str2 + w;
 //				}
 //			}
-//		        System.out.println("");
+//		        //System.out.println("");
 //				System.out.println(count);
-//				System.out.println(str2);
+				//System.out.println(str2);
 //				String s="java";
 //				String s1="java";
 //				s1="selenium";
@@ -729,10 +743,10 @@ public class Logics {
 //		        }
 
         //HashMap
-//				String str="selenium sai sai ";
+//				String str="Selenium sai sai ";
 //				HashMap<Character ,Integer> charCountMap=new HashMap<Character ,Integer>();
 //				//char[]ch=str.toCharArray();
-//				for(char c:str.toCharArray()) {
+//				for(char c:str.toLowerCase().toCharArray()) {
 //				   // if(!String.valueOf(c).isBlank())// returns true if the string is empty or contains only white space//
 //                  // The java string isEmpty() method checks if this string is empty.
 //                 // It returns true, if the length of the string is 0 otherwise false
@@ -746,6 +760,7 @@ public class Logics {
 //		        	System.out.println(entry.getKey()+"  "+entry.getValue());
 //		        }
 //		        System.out.println("test "+charCountMap.entrySet().stream().map(e->e.getKey()+" "+e.getValue()).collect(Collectors.toList()));
+//                charCountMap.entrySet().stream().map(e->e.getKey()+" "+e.getValue()).forEach(System.out::println);
 ////          //find occurance of duplicates
 //		System.out.println("find occurance of duplicates");
 //         Set<Character> chrs=charCountMap.keySet();
@@ -768,7 +783,7 @@ public class Logics {
 //				wordcount.put(word,1);
 //			}
 //		}
-//////          // How do you count the number of occurrences of each character in a string?
+////          // How do you count the number of occurrences of each character in a string?
 //		for(Map.Entry en:wordcount.entrySet()){
 //			System.out.println(en.getKey()+":"+en.getValue());
 //
@@ -784,6 +799,7 @@ public class Logics {
 //		}
 //        System.out.println("Steam and filter"+wordcount.entrySet().stream().filter(e->e.getValue()>1).map(e->e.getKey()+":"
 //               +e.getValue()).collect(Collectors.toList()));
+//        wordcount.entrySet().stream().filter(e->e.getValue()>1).map(e->e.getKey()+":"+e.getValue()).forEach(System.out::println);
 
 //        Integer []numbers={ 1, 2,3,4,5,1,2};
 //        List<Integer>arr=Arrays.asList(numbers);
@@ -1004,7 +1020,6 @@ public class Logics {
 //        // \u000d value=20;
 //        System.out.println(value);
 //        // \u000d System.out.println("this comment line");
-
 //        // how to find length of string in java without using length method
 //        String str = "Testing";
 //        System.out.println(str.toCharArray().length);
@@ -1132,6 +1147,10 @@ public class Logics {
             Arrays.sort(c2);
             return Arrays.equals(c1, c2);
         }
+    }
+
+    public static boolean vowelCheck(char c){
+        return c=='a' ||c=='e'||c=='i'||c=='o'||c=='u';
     }
 
 }
