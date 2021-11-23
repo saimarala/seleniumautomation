@@ -34,12 +34,13 @@ public class WebEventListner extends TestBase implements WebDriverEventListener 
 
     public void beforeNavigateTo(String url, WebDriver driver) {
         // TODO Auto-generated method stub
+        System.out.println("Before navigating to: '" + url + "'");
 
     }
 
     public void afterNavigateTo(String url, WebDriver driver) {
         // TODO Auto-generated method stub
-
+        System.out.println("Navigated to:'" + url + "'");
     }
 
     public void beforeNavigateBack(WebDriver driver) {
