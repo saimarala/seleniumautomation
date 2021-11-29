@@ -144,7 +144,6 @@ public class Logics {
 //								Scanner sc=new Scanner(System.in);
 //								int num=sc.nextInt();
 //							int num=5;
-//
 //								for(int i=1;i<10;i++) {//
 //									System.out.println(num+"*"+i+"="+(num*i));
 //								}
@@ -295,7 +294,7 @@ public class Logics {
         //		System.out.println("enter a char");
         //		String a=sc.nextLine();
         //		String b=a.toLowerCase();
-        //       String x = "id ii this is selenium";
+ //              String x = "id ii this is selenium";
 //						char e='i';
 //						int c=0;
 //
@@ -308,6 +307,12 @@ public class Logics {
 //
 //						}
 //						System.out.println(c);
+//        for (char ch:x.toCharArray()){
+//            if(ch==e){
+//              c++;
+//            }
+//        }
+//        System.out.println(c);
 //        String e1="is";
 //        long count=x.chars().filter(e->(char)e=='i').count();
 //        System.out.println("char count : "+count);
@@ -342,27 +347,29 @@ public class Logics {
 //				//			//reverse word*******************
 //						String reversedString="";
 //						String str="this is selenium";
-//						//op: siht si muineles
+						//op: siht si muineles
 //						String words[]=str.split(" ");
 //						for(int i=0;i<words.length;i++) {
 //								String word=words[i];
 //								String reverseWord="";
 //							for(int j=word.length()-1;j>=0;j--) {
-//								reverseWord=reverseWord+word.charAt(j);
+//								//reverseWord=reverseWord+word.charAt(j);
+//                                reverseWord+=word.charAt(j);
 //
 //								}
-//							reversedString = reversedString+reverseWord+" ";
+//							//reversedString = reversedString+reverseWord+" ";
+//                            reversedString += reverseWord+" ";
 //						}
 //					System.out.println(reversedString.trim());
-        //
+
 //				//selenium is this
 //				String str="this is selenium";
-//				String words[]=str.split(" ");
+//				String words[]=str.split("\\s");
 //				String reverse="";
 //				for(int i=words.length-1;i>=0;i--) {
-//					reverse=reverse+words[i]+" ";
+//					//reverse=reverse+words[i]+" ";
+//                    reverse+=words[i]+" ";
 //				}
-//
 //				System.out.println(reverse);
 //				//ascendening order
 //					int arr[]= {1,9,6,2,5,8};
@@ -393,18 +400,18 @@ public class Logics {
 //				String alp="";
 //				String spec="";
 //				String str="geeks01$$for02geeks03!@!!";
-//				for(int i=0;i<str.length();i++) {
-//					if(Character.isDigit(str.charAt(i))) {
-//						num.append(str.charAt(i));
-//						num1=num1+str.charAt(i);
-//					}else if(Character.isAlphabetic(str.charAt(i))) {
-//						alpha.append(str.charAt(i));
-//						alp=alp+str.charAt(i);
+//				for(char ch:str.toCharArray()) {
+//					if(Character.isDigit(ch)) {
+//						//num.append(str.charAt(i));
+//						num1+=ch;
+//					}else if(Character.isAlphabetic(ch)) {
+//						//alpha.append(str.charAt(i));
+//						alp+=ch;
 //					}else {
-//						special.append(str.charAt(i));
-//						spec=spec+str.charAt(i);
+//						//special.append(str.charAt(i));
+//						spec+=ch;
 //					}
-//				}
+// 				}
 //				System.out.println(num1);
 //				System.out.println(alp);
 //				System.out.println(spec);
@@ -449,7 +456,6 @@ public class Logics {
         //largest number & smallest number
 
 //				int a[]={2,4,5,10,8,7,2,100,0,-1};
-//
 //				int smallest=a[0];
 //				int largest=a[0];
 //				for(int i=1;i<a.length;i++) {
@@ -474,7 +480,10 @@ public class Logics {
 //
 //					}
 //				}
-        //We all know that JVM divides the allocated memory to a Java program into two parts. one is Stack and another one is heap. Stack is used for execution purpose and heap is used for storage purpose. In that heap memory, JVM allocates some memory specially meant for string literals. This part of the heap memory is called String Constant Pool.
+        //We all know that JVM divides the allocated memory to a Java program into two parts. one is Stack and another one is heap.
+        // Stack is used for execution purpose and heap is used for storage purpose.
+        // In that heap memory, JVM allocates some memory specially meant for string literals.
+        // part of the heap memory is called String Constant Pool.
         //For example, when you create string objects using string literal like below, they will be stored in the String Constant Pool.
 //				String s1="sel";
 //				String s2="sel";
@@ -553,11 +562,11 @@ public class Logics {
 //				Set<String> store=new HashSet<String>();
 //				for(String name:names) {
 //					if(store.add(name)==false) {
-//						System.out.println("duplicate element is :"+name);
-//						//store.remove(name);
+						//System.out.println("duplicate element is :"+name);
+						//store.remove(name);
 //					}
 //				}
-//				System.out.println(store);
+				//System.out.println(store);
 
 //				Integer names[]= {1,2,3,4,5,1,2};
 //				Set<Integer>store=new HashSet<Integer>();
@@ -570,10 +579,11 @@ public class Logics {
 //				}
 //				System.out.println(store);
 
-//        Set<Integer>dataSet=new HashSet<Integer>();
-//        Set<Integer>dataSet1=new HashSet<Integer>();
+ //       Set<Integer>dataSet=new HashSet<Integer>();
+ //       Set<Integer>dataSet1=new HashSet<Integer>();
 //        Set<Integer>dupSet=Arrays.asList(names).stream().filter(e->!dataSet.add(e)).collect(Collectors.toSet());
 //        Set<Integer>RemovedupSet=Arrays.stream(names).filter(e->dataSet1.add(e)).collect(Collectors.toSet());
+        //Arrays.stream(names).filter(e->dataSet.add(e)).forEach(System.out::println);
 //        System.out.println(dupSet);
  //       System.out.println(RemovedupSet);
         //Set
@@ -615,7 +625,6 @@ public class Logics {
 
 //				String[] str = { "GEEKS", "FOR", "GEEKS" };
 //		        System.out.println(str[0].length());
-
 //
 //		        String str="he selenium";
 //		        StringBuffer s=new StringBuffer(str);
@@ -642,7 +651,7 @@ public class Logics {
 //            actualSum+=i;
 //        }
 //       System.out.println(expSum-actualSum);
-        //write a java program to merge two sorted arrays
+//        //write a java program to merge two sorted arrays
 //        Integer a[]={1,3,5,7,9} ,b[]={2,4,6,8};
 //        Map<Integer,Boolean>mp=new HashMap<>();
 //        for (int i=0;i<a.length;i++){
@@ -651,9 +660,16 @@ public class Logics {
 //        for (int i=0;i<b.length;i++){
 //            mp.put(b[i],true);
 //        }
+//        for (int ar:a){
+//            mp.put(ar,true);
+//        }
+//        for (int ar:b){
+//            mp.put(ar,true);
+//        }
 //         // mp.entrySet().forEach(System.out::println);
-//        //System.out.println(mp);
+//        System.out.println(mp);
 //        System.out.println(mp.entrySet().stream().map(e->e.getKey()).collect(Collectors.toList()));
+        //mp.entrySet().stream().map(e->e.getKey()).forEach(System.out::println);
         //count no of vowels
 //			String str="this is selenium";
 //			char ch[]=str.toCharArray();
@@ -750,17 +766,21 @@ public class Logics {
 //				   // if(!String.valueOf(c).isBlank())// returns true if the string is empty or contains only white space//
 //                  // The java string isEmpty() method checks if this string is empty.
 //                 // It returns true, if the length of the string is 0 otherwise false
-//					if(charCountMap.containsKey(c)) {
+//                    if(StringUtils.isNotBlank(String.valueOf(c))){
+//                        if(charCountMap.containsKey(c)) {
 //						charCountMap.put(c, charCountMap.get(c)+1);
 //					}else {
 //						charCountMap.put(c, 1);
 //					}
+//                    }
 //				}
 //		        for(Map.Entry entry :charCountMap.entrySet()) {
 //		        	System.out.println(entry.getKey()+"  "+entry.getValue());
 //		        }
 //		        System.out.println("test "+charCountMap.entrySet().stream().map(e->e.getKey()+" "+e.getValue()).collect(Collectors.toList()));
 //                charCountMap.entrySet().stream().map(e->e.getKey()+" "+e.getValue()).forEach(System.out::println);
+//        charCountMap.entrySet().stream().forEach(System.out::println);
+//                System.out.println(charCountMap.entrySet());
 ////          //find occurance of duplicates
 //		System.out.println("find occurance of duplicates");
 //         Set<Character> chrs=charCountMap.keySet();
@@ -906,7 +926,7 @@ public class Logics {
 //            i++;
 //        }
 
-////        //  output numbers from 1 to 100 without using numbers in your code
+//        //  output numbers from 1 to 100 without using numbers in your code
         //      int one = 'Z' / 'Z';//1
 //        String s1 = "..........";
 //        for (int i = one; i <= s1.length() * s1.length(); i++) {
@@ -918,14 +938,21 @@ public class Logics {
 //            System.out.println(i);
 //        }
 
-        //		int count=0;
+//        		int count=0;
 //		while(count<100){
 //			count++;
 //			System.out.println(count);
 //		}
+
+//        		int count=0;
+//		while(count<100){
+//
+//			System.out.println(++count);
+//		}
 //          printNum(1,'d');
 //         printNum(1,100);
-        // IntStream.range(1,101).forEach(e->System.out.println(e));
+//         IntStream.range(1,101).forEach(e->System.out.println(e));
+//        IntStream.range(1,101).forEach(System.out::println);
 
 
         //Compare two int numbers (Integer caching)
@@ -952,7 +979,8 @@ public class Logics {
         //Find the sum of natural numbers
 //        int total=0 , count=1 , num=10;
 //        while(num>=count){
-//            total=total+count;
+//          //  total=total+count;
+//            total+=count;
 //            count++;
 //        }
 //        System.out.println(total);
@@ -1052,7 +1080,6 @@ public class Logics {
 //        System.out.println(count2);
 //        System.out.println(count3);
 //        //how to generate Random Numbers in Java using Random, Math and ThreadLocalRandom.
-
 //        Random random = new Random();
 //        for (int i = 0; i < 5; i++) {
 //            System.out.println(random.nextInt());
@@ -1082,8 +1109,6 @@ public class Logics {
 //
 //        System.out.println("test :" + Math.pow(10, 5));
 //        System.out.println(randomNumberGenerator(6));
-
-
 //        //Print your name 1000 times without using any loop in Java
 //        String str="selenium";
 //        String s="i";
@@ -1098,7 +1123,6 @@ public class Logics {
 //        replaces all the occurrences of old char with new char
 //        System.out.println(str.replaceAll("(.*)is(.*)","was"));// replaceAll() method
 //        replaces all the occurrences of old string with the new string.
-
 
     }
 
