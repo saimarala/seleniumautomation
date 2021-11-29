@@ -1,10 +1,17 @@
 package Abstract;
 
-public abstract class Bank {
+import Interface.IndianMedical;
+
+public abstract class Bank implements IndianMedical {
 
     int amt = 100;//non static
     final int rate = 10;//final
     static int loanrate = 5;//static
+
+    @Override
+    public void neroServices() {
+
+    }
 
 
     //partial abstraction
