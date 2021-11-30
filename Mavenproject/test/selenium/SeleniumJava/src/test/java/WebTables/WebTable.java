@@ -30,6 +30,7 @@ public class WebTable {
 
         //driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         Thread.sleep(4000);
         //columns
         //////////////////////////////

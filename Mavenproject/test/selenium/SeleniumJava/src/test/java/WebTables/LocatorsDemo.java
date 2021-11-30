@@ -19,10 +19,10 @@ public class LocatorsDemo {
         driver.findElement(By.linkText("link text"));
         driver.findElement(By.partialLinkText("partial link text"));
         driver.findElement(By.xpath(""));
-        driver.findElement(RelativeLocator.withTagName("input").
-                above(By.id("name")).below(By.name("pwd")).
-                near(By.id("ss")).
-                toLeftOf(By.className("ss")).toRightOf(By.className("ss")));
+        //driver.findElement(RelativeLocator.withTagName("input").
+//                above(By.id("name")).below(By.name("pwd")).
+//                near(By.id("ss")).
+//                toLeftOf(By.className("ss")).toRightOf(By.className("ss")));
 
     }
 }
