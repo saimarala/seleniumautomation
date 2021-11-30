@@ -10,14 +10,14 @@
 
     <test name="001">
         <classes>
-            <class name="Testbase.TestNGAnnonations1"/>
-            <class name="Testbase.TestNGAnnonations2"/>
+            <class name="testNG.TestNGAnnonations1"/>
+            <class name="testNG.TestNGAnnonations2"/>
         </classes>
     </test>
 
     <test name="002">
         <classes>
-            <class name="Testbase.TestNGAnnonations2"/>
+            <class name="testNG.TestNGAnnonations2"/>
         </classes>
     </test>
 </suite>

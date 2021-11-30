@@ -10,7 +10,7 @@
 
     <test name="001" parallel="classes">
         <classes>
-            <class name="Testbase.Test2"/>
+            <class name="testNG.Test2"/>
         </classes>
     </test>
 </suite>
