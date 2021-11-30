@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="5">
+<!--    <parameter name="screenshot_capture_enabled" value="false"/>-->
+<!--    <parameter name="hpesc-credits_screenshot_capture_enabled" value="true"/>-->
+    <parameter name="uName" value="pwdtest"></parameter>
+    <listeners>
+        <listener class-name="com.hrm.qa.util.MyTransformer"></listener>
+    </listeners>
+
+    <test name="001">
+        <classes>
+            <class name="Testbase.TestNGAnnonations1"/>
+            <class name="Testbase.TestNGAnnonations2"/>
+        </classes>
+    </test>
+
+    <test name="002">
+        <classes>
+            <class name="Testbase.TestNGAnnonations2"/>
+        </classes>
+    </test>
+</suite>
