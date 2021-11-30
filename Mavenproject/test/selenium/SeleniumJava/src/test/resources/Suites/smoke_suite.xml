@@ -10,7 +10,7 @@
 
     <test name="001" parallel="classes">
         <classes>
-            <class name="MyPackage.faliedTest"/>
+            <class name="testNG.faliedTest"/>
         </classes>
     </test>
 </suite>
