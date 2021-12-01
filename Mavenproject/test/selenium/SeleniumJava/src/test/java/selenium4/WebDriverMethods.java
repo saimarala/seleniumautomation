@@ -1,10 +1,7 @@
 package selenium4;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.Cookie;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WindowType;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
@@ -22,6 +19,7 @@ public class WebDriverMethods {
         driver.manage().window().minimize();
         driver.manage().window().fullscreen();
         driver.manage().window().maximize();
+
         Cookie name = new Cookie("mycookie", "123456789123");
         driver.manage().getCookies();// Return The List of all Cookies
         Cookie c=driver.manage().getCookieNamed(name.getValue());////Return specific cookie according to name
@@ -34,11 +32,21 @@ public class WebDriverMethods {
         for(Cookie getcookies :cookiesList) {
             System.out.println(getcookies );
         }
-
+//      //Fetches the size of the browser window in pixels.
         int width=driver.manage().window().getSize().getWidth();
+//        //Or store the dimensions and query them later
         Dimension dim=driver.manage().window().getSize();
         int height=dim.getHeight();
+//        //Restores the window and sets the window size.
         driver.manage().window().setSize(new Dimension(800,600));
+        //Fetches the coordinates of the top left coordinate of the browser window.
+        // Access each dimension individually
+        int x = driver.manage().window().getPosition().getX();
+        int y = driver.manage().window().getPosition().getY();
+        // Or store the dimensions and query them later
+        Point position = driver.manage().window().getPosition();
+        int x1 = position.getX();
+        int y1 = position.getY();
 
        // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
        // driver.manage().timeouts().pageLoadTimeout(20);
