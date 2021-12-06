@@ -35,7 +35,7 @@ public class Assertion {
         System.out.println("logout");
         softAssert.assertEquals(false, true);
 
-        softAssert.assertAll();
+        softAssert.assertAll("log out issue");
     }
 
 }
