@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite"  parallel="tests" thread-count="5">
+<!--    <parameter name="screenshot_capture_enabled" value="false"/>-->
+<!--    <parameter name="hpesc-credits_screenshot_capture_enabled" value="true"/>-->
+    <parameter name="uName" value="pwdtest"></parameter>
+    <listeners>
+        <listener class-name="com.hrm.qa.util.MyTransformer"></listener>
+    </listeners>
+
+
+    <test name="001" parallel="classes">
+        <groups>
+            <run>
+                <include name="sanity"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="testNG.GroupsDemo"/>
+            <class name="testNG.GroupsDemo3"/>
+        </classes>
+    </test>
+
+    <test name="002" parallel="classes">
+        <groups>
+            <run>
+                <exclude name="sanity"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="testNG.GroupsDemo2"/>
+        </classes>
+    </test>
+</suite>
