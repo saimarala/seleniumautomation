@@ -63,8 +63,10 @@ public class WebDriverMethods {
         driver.switchTo().newWindow(WindowType.TAB);
         driver.switchTo().frame(1);
         driver.switchTo().frame("iframe");
+        //driver.switchTo().frame(WebElement ele);
         driver.switchTo().defaultContent();
         driver.switchTo().parentFrame();
+        driver.switchTo().activeElement().click();
         Set<String> s=driver.getWindowHandles();
         String parent= driver.getWindowHandle();
 
@@ -72,5 +74,7 @@ public class WebDriverMethods {
         driver.navigate().back();
         driver.navigate().forward();
         driver.navigate().refresh();
+        driver.close();
+        driver.quit();
     }
 }
