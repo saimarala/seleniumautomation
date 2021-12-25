@@ -21,7 +21,7 @@ public class XLUtility {
     public CellStyle style;
     String path=null;
 
-    XLUtility(String path){
+   public  XLUtility(String path){
         this.path=path;
     }
     public int getRowCount(String sheetName) throws Exception {
