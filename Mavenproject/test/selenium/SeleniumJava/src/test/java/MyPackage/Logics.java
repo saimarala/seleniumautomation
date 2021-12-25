@@ -1,9 +1,8 @@
 package MyPackage;
 
 
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.jsoup.helper.StringUtil;
-
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -14,13 +13,13 @@ import java.util.zip.ZipEntry;
 public class Logics {
 
     public static void main(String[] args) {
-        //swap two numbers
-				/*int x=10,y=20;
-				x=x+y;
-				y=x-y;
-				x=x-y;
-				System.out.println(x);
-				System.out.println(y);*/
+//        //swap two numbers
+//				int x=10,y=20;
+//				x=x+y;
+//				y=x-y;
+//				x=x-y;
+//				System.out.println(x);
+//				System.out.println(y);
 
         //fibonacci series
 //				int n1=0,n2=1,num=10;
@@ -143,6 +142,7 @@ public class Logics {
 //								System.out.println("enter data");
 //								Scanner sc=new Scanner(System.in);
 //								int num=sc.nextInt();
+//                                String str=sc.next();
 //							int num=5;
 //								for(int i=1;i<10;i++) {//
 //									System.out.println(num+"*"+i+"="+(num*i));
@@ -163,7 +163,7 @@ public class Logics {
 
         //Palindrome number
 
-//						int num=343;
+						int num=343;
 //						int sum=0;
 //						int  temp=num;
 //						while(num>0) {
@@ -268,7 +268,6 @@ public class Logics {
 //						String 	p[]=a.split("o");
 //						System.out.println(p.length);
 //						System.out.println(p[0]);
-//
 //						for(int i=0;i<p.length;i++) {
 //							System.out.println(p[i]);
 //						}
@@ -294,7 +293,7 @@ public class Logics {
         //		System.out.println("enter a char");
         //		String a=sc.nextLine();
         //		String b=a.toLowerCase();
- //              String x = "id ii this is selenium";
+ //                    String x = "id ii this is selenium";
 //						char e='i';
 //						int c=0;
 //
@@ -347,14 +346,14 @@ public class Logics {
 //				//			//reverse word*******************
 //						String reversedString="";
 //						String str="this is selenium";
-						//op: siht si muineles
+//						//op: siht si muineles
 //						String words[]=str.split(" ");
 //						for(int i=0;i<words.length;i++) {
 //								String word=words[i];
 //								String reverseWord="";
 //							for(int j=word.length()-1;j>=0;j--) {
 //								//reverseWord=reverseWord+word.charAt(j);
-//                                reverseWord+=word.charAt(j);
+//                                reverseWord +=word.charAt(j);
 //
 //								}
 //							//reversedString = reversedString+reverseWord+" ";
@@ -399,11 +398,13 @@ public class Logics {
 //				String num1="";
 //				String alp="";
 //				String spec="";
+//
 //				String str="geeks01$$for02geeks03!@!!";
 //				for(char ch:str.toCharArray()) {
 //					if(Character.isDigit(ch)) {
 //						//num.append(str.charAt(i));
-//						num1+=ch;
+//						 num1+=ch;
+//                         alpha.append(ch);
 //					}else if(Character.isAlphabetic(ch)) {
 //						//alpha.append(str.charAt(i));
 //						alp+=ch;
@@ -412,6 +413,7 @@ public class Logics {
 //						spec+=ch;
 //					}
 // 				}
+//                System.out.println(alpha);
 //				System.out.println(num1);
 //				System.out.println(alp);
 //				System.out.println(spec);
@@ -480,7 +482,7 @@ public class Logics {
 //
 //					}
 //				}
-        //We all know that JVM divides the allocated memory to a Java program into two parts. one is Stack and another one is heap.
+        //We all know that JVM divides the all  qocated memory to a Java program into two parts. one is Stack and another one is heap.
         // Stack is used for execution purpose and heap is used for storage purpose.
         // In that heap memory, JVM allocates some memory specially meant for string literals.
         // part of the heap memory is called String Constant Pool.
@@ -604,10 +606,10 @@ public class Logics {
 //		System.out.print("last :"+names.stream().collect(Collectors.toSet()));
 
 //
-//			int a=1000,b=000,c=300;
+//			int a=1000,b=3000,c=300;
 //				if(a>b && a>c){// a && B it executes both the conditions
-        // a && b if first condition is true then only it executes second condition
-        //a || b if first condition is false then only it executes second condition
+//        // a && b if first condition is true then only it executes second condition
+//        //a || b if first condition is false then only it executes second condition
 //					System.out.println("a is greater");
 //					}
 //				else if(b>c){
@@ -616,12 +618,17 @@ public class Logics {
 //				else {
 //					System.out.println("c is greater");
 //				}
-
-//				String str = "this # Is$ selenium123 Testing4";
-//				//str = str.replaceAll("[a-zA-Z0-9]", "");
-//				//str=str.replaceAll("[^0-9]","");
-//				//str=str.replaceAll("[^a-zA-Z0-9]", "");
-//				System.out.println(str);
+//
+//
+//        if(a<b && a<c){
+//            System.out.println("a is smaller");
+//        }
+//        else if(b<c){
+//            System.out.println("b is smaller");
+//        }
+//        else {
+//            System.out.println("c is smaller");
+//        }
 
 //				String[] str = { "GEEKS", "FOR", "GEEKS" };
 //		        System.out.println(str[0].length());
@@ -954,7 +961,6 @@ public class Logics {
 //         IntStream.range(1,101).forEach(e->System.out.println(e));
 //        IntStream.range(1,101).forEach(System.out::println);
 
-
         //Compare two int numbers (Integer caching)
 //        //-128 to 127
 //        Integer num1=100;
@@ -1123,6 +1129,25 @@ public class Logics {
 //        replaces all the occurrences of old char with new char
 //        System.out.println(str.replaceAll("(.*)is(.*)","was"));// replaceAll() method
 //        replaces all the occurrences of old string with the new string.
+//        String a="a",b="b",c="c";
+//        System.out.println(a.concat(b).concat(c));
+//        				String str = "this # Is$ selenium123 Testing4";
+//				str = str.replaceAll("[a-zA-Z0-9]", "");
+//				str=str.replaceAll("[^0-9]","");
+				//str=str.replaceAll("[^a-zA-Z0-9]", "");
+//				System.out.println(str);
+
+//        String str="test12345";
+//       String digit= str.replaceAll("[^0-9]","");
+//       System.out.println(digit);
+//       String str2="Education";
+//       String vow=str2.replaceAll("[^aeiouAEIOU]","");
+//       System.out.println(vow);
+
+        //Array rotation
+        int input[]={1,2,3,4,5};
+        Collections.rotate(Arrays.asList(input),3);
+        System.out.println(Arrays.toString(input));
 
     }
 
