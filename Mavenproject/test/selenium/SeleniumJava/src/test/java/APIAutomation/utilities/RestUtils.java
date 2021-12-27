@@ -6,7 +6,7 @@ public class RestUtils {
 
     public static String empName(){
        String generatedString= RandomStringUtils.randomAlphabetic(1);
-       return ("API"+generatedString);
+       return ("APIAutomation"+generatedString);
     }
     public static String empSal(){
         String generatedString=RandomStringUtils.randomNumeric(5);
@@ -15,6 +15,9 @@ public class RestUtils {
 
     public static String empAge(){
         String generatedString=RandomStringUtils.randomNumeric(2);
+        if (generatedString.startsWith("0")){
+            empAge();
+        }
         return (generatedString);
     }
 
