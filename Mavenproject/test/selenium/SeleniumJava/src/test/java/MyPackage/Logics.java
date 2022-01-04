@@ -2,6 +2,7 @@ package MyPackage;
 
 
 import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
+import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
 import java.io.*;
 import java.util.*;
@@ -10,7 +11,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.zip.ZipEntry;
 
-public class Logics {
+public class  Logics {
 
     public static void main(String[] args) {
 //        //swap two numbers
@@ -163,7 +164,7 @@ public class Logics {
 
         //Palindrome number
 
-						int num=343;
+//						int num=343;
 //						int sum=0;
 //						int  temp=num;
 //						while(num>0) {
@@ -293,7 +294,7 @@ public class Logics {
         //		System.out.println("enter a char");
         //		String a=sc.nextLine();
         //		String b=a.toLowerCase();
- //                    String x = "id ii this is selenium";
+//                     String x = "id ii this is selenium";
 //						char e='i';
 //						int c=0;
 //
@@ -482,7 +483,7 @@ public class Logics {
 //
 //					}
 //				}
-        //We all know that JVM divides the all  qocated memory to a Java program into two parts. one is Stack and another one is heap.
+        //We all know that JVM divides the all  allocated memory to a Java program into two parts. one is Stack and another one is heap.
         // Stack is used for execution purpose and heap is used for storage purpose.
         // In that heap memory, JVM allocates some memory specially meant for string literals.
         // part of the heap memory is called String Constant Pool.
@@ -1010,7 +1011,6 @@ public class Logics {
 //		System.out.println(str1.substring(str1.indexOf('(')+1,str1.indexOf(')')));
 //		System.out.println(str1.substring(0,str1.indexOf(" ")));
 
-
 //		String filePath="C:\\Users\\marala\\Desktop\\selenium.txt";
 //		int charCount=0;
 //		int wordCount=0;
@@ -1055,9 +1055,9 @@ public class Logics {
 //        System.out.println(value);
 //        // \u000d System.out.println("this comment line");
 //        // how to find length of string in java without using length method
-//        String str = "Testing";
-//        System.out.println(str.toCharArray().length);
-//        System.out.println(str.lastIndexOf(""));
+//        String str = "Testing ";
+//        System.out.println(str.trim().toCharArray().length);
+//        System.out.println(str.trim().lastIndexOf(""));
 //        System.out.println(getLength(str));
 
 //        //Get the Count of Words is a Given Capitalized String
@@ -1141,13 +1141,13 @@ public class Logics {
 //       String digit= str.replaceAll("[^0-9]","");
 //       System.out.println(digit);
 //       String str2="Education";
-//       String vow=str2.replaceAll("[^aeiouAEIOU]","");
-//       System.out.println(vow);
+//       str2=str2.replaceAll("[^aeiouAEIOU]","");
+//       System.out.println(str2);
 
         //Array rotation
-        int input[]={1,2,3,4,5};
-        Collections.rotate(Arrays.asList(input),3);
-        System.out.println(Arrays.toString(input));
+//        int input[]={1,2,3,4,5};
+//        Collections.rotate(Arrays.asList(input),3);
+//        System.out.println(Arrays.toString(input));
 
     }
 
