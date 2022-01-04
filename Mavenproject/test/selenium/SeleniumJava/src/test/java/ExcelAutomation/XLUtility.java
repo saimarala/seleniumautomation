@@ -42,16 +42,16 @@ public class XLUtility {
         fi.close();
         return cellCount;
     }
-    public String getCellData(String sheetName,int rowNum,int colNum)throws Exception{
+    public Object getCellData(String sheetName,int rowNum,int colNum)throws Exception{
         fi=new FileInputStream(path);
         wb=new XSSFWorkbook(fi);
         sheet=wb.getSheet(sheetName);
-        row=sheet.getRow(rowNum);
-        cell=row.getCell(colNum);
+//        row=sheet.getRow(rowNum);
+//        cell=row.getCell(colNum);
         DataFormatter formatter=new DataFormatter();
-        String data;
+        Object data;
         try{
-            data=formatter.formatCellValue(cell);
+            data=formatter.formatCellValue(sheet.getRow(rowNum).getCell(colNum));
             //Returned the formatted value of a cell in to string regardless of celltype
         }catch (Exception e){
             data="";
